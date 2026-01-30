@@ -1,0 +1,258 @@
+[
+    {
+        "name": "Vandervell",
+        "logo": "assets/images/partner/01-Vandervell.svg"
+    },
+    {
+        "name": "Carraro",
+        "logo": "assets/images/partner/02-Carraro.svg"
+    },
+    {
+        "name": "TWB",
+        "logo": "assets/images/partner/03-TWB.svg"
+    },
+    {
+        "name": "Clevite",
+        "logo": "assets/images/partner/04-Clevite.svg"
+    },
+    {
+        "name": "Mann Filter",
+        "logo": "assets/images/partner/05-Mann-Filter.svg"
+    },
+    {
+        "name": "Timken",
+        "logo": "assets/images/partner/06-Timken.svg"
+    },
+    {
+        "name": "FP Diesel",
+        "logo": "assets/images/partner/07-FP-Diesel.svg"
+    },
+    {
+        "name": "Caltex",
+        "logo": "assets/images/partner/08-Caltex.svg"
+    },
+    {
+        "name": "AE",
+        "logo": "assets/images/partner/09-AE.svg"
+    },
+    {
+        "name": "MS Motorservice",
+        "logo": "assets/images/partner/10-MS-Motorservice.svg"
+    },
+    {
+        "name": "Lip",
+        "logo": "assets/images/partner/11-Lip.svg"
+    },
+    {
+        "name": "Luk",
+        "logo": "assets/images/partner/12-Luk.svg"
+    },
+    {
+        "name": "Optibelt",
+        "logo": "assets/images/partner/13-Optibelt.svg"
+    },
+    {
+        "name": "Fel Pro",
+        "logo": "assets/images/partner/14-Fel-Pro.svg"
+    },
+    {
+        "name": "Federal Mogul",
+        "logo": "assets/images/partner/15-Federal-Mogul.svg"
+    },
+    {
+        "name": "Elring",
+        "logo": "assets/images/partner/16-Elring.svg"
+    },
+    {
+        "name": "Lucas",
+        "logo": "assets/images/partner/17-Lucas.svg"
+    },
+    {
+        "name": "Corteco",
+        "logo": "assets/images/partner/18-Corteco.svg"
+    },
+    {
+        "name": "National Oil Seals",
+        "logo": "assets/images/partner/19-National-Oil-Seals.svg"
+    },
+    {
+        "name": "Delphi Technologies",
+        "logo": "assets/images/partner/20-Delphi-Technologies.svg"
+    },
+    {
+        "name": "Hofmann",
+        "logo": "assets/images/partner/21-Hofmann.svg"
+    },
+    {
+        "name": "Delkor",
+        "logo": "assets/images/partner/22-Delkor.svg"
+    },
+    {
+        "name": "STP",
+        "logo": "assets/images/partner/23-STP.svg"
+    },
+    {
+        "name": "ArmorAll",
+        "logo": "assets/images/partner/24-ArmorAll.svg"
+    },
+    {
+        "name": "Girling",
+        "logo": "assets/images/partner/25-Girling.svg"
+    },
+    {
+        "name": "Monroe",
+        "logo": "assets/images/partner/26-Monroe.svg"
+    },
+    {
+        "name": "SpeedMate",
+        "logo": "assets/images/partner/27-SpeedMate.svg"
+    },
+    {
+        "name": "Philips",
+        "logo": "assets/images/partner/28-Philips.svg"
+    },
+    {
+        "name": "Valeo",
+        "logo": "assets/images/partner/29-Valeo.svg"
+    },
+    {
+        "name": "SKR",
+        "logo": "assets/images/partner/30-SKR.svg"
+    },
+    {
+        "name": "Bremi",
+        "logo": "assets/images/partner/31-Bremi.svg"
+    },
+    {
+        "name": "AARON",
+        "logo": "assets/images/partner/32-AARON.svg"
+    },
+    {
+        "name": "Spenco",
+        "logo": "assets/images/partner/33-Spenco.svg"
+    },
+    {
+        "name": "AARNakamichiON",
+        "logo": "assets/images/partner/34-Nakamichi.svg"
+    },
+    {
+        "name": "Dynamatic Technologies",
+        "logo": "assets/images/partner/35-Dynamatic-Technologies.svg"
+    },
+    {
+        "name": "Prestolite",
+        "logo": "assets/images/partner/36-Prestolite.svg"
+    },
+    {
+        "name": "Bluepoint",
+        "logo": "assets/images/partner/37-Bluepoint.svg"
+    },
+    {
+        "name": "Spaco",
+        "logo": "assets/images/partner/38-Spaco.svg"
+    },
+    {
+        "name": "Payen",
+        "logo": "assets/images/partner/39-Payen.svg"
+    },
+    {
+        "name": "GUD Filters",
+        "logo": "assets/images/partner/40-GUD-Filters.svg"
+    },
+    {
+        "name": "Wolf",
+        "logo": "assets/images/partner/41-Wolf.svg"
+    },
+    {
+        "name": "Precision",
+        "logo": "assets/images/partner/42-Precision.svg"
+    },
+    {
+        "name": "INA",
+        "logo": "assets/images/partner/43-INA.svg"
+    },
+    {
+        "name": "Hella",
+        "logo": "assets/images/partner/44-Hella.svg"
+    },
+    {
+        "name": "Comma",
+        "logo": "assets/images/partner/45-Comma.svg"
+    },
+    {
+        "name": "VDO",
+        "logo": "assets/images/partner/46-VDO.svg"
+    },
+    {
+        "name": "Nissens",
+        "logo": "assets/images/partner/47-Nissens.svg"
+    },
+    {
+        "name": "NKN",
+        "logo": "assets/images/partner/48-NKN.svg"
+    },
+    {
+        "name": "Pierburg",
+        "logo": "assets/images/partner/49-Pierburg.svg"
+    },
+    {
+        "name": "TRW",
+        "logo": "assets/images/partner/50-TRW.svg"
+    },
+    {
+        "name": "BEHR",
+        "logo": "assets/images/partner/51-BEHR.svg"
+    },
+    {
+        "name": "ASNC",
+        "logo": "assets/images/partner/52-ASNC.svg"
+    },
+    {
+        "name": "MAHLE",
+        "logo": "assets/images/partner/53-MAHLE.svg"
+    },
+    {
+        "name": "Magneti Marelli",
+        "logo": "assets/images/partner/54-Magneti-Marelli.svg"
+    },
+    {
+        "name": "FAG",
+        "logo": "assets/images/partner/55-FAG.svg"
+    },
+    {
+        "name": "SWAG",
+        "logo": "assets/images/partner/56-SWAG.svg"
+    },
+    {
+        "name": "Koyorad",
+        "logo": "assets/images/partner/57-Koyorad.svg"
+    },
+    {
+        "name": "WIX",
+        "logo": "assets/images/partner/58-WIX.svg"
+    },
+    {
+        "name": "Schaeffler",
+        "logo": "assets/images/partner/59-Schaeffler.svg"
+    },
+    {
+        "name": "Hartridge",
+        "logo": "assets/images/partner/60-Hartridge.svg"
+    },
+    {
+        "name": "Mackay",
+        "logo": "assets/images/partner/61-Mackay.svg"
+    },
+    {
+        "name": "Glacier",
+        "logo": "assets/images/partner/62-Glacier.svg"
+    },
+    {
+        "name": "ADR",
+        "logo": "assets/images/partner/63-ADR.svg"
+    },
+    {
+        "name": "SWF",
+        "logo": "assets/images/partner/64-SWF.svg"
+    }
+]
