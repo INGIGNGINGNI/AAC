@@ -69,7 +69,7 @@ Version: 		1.0.0
 .asset-content.piece-two,
 .asset-content.piece-three,
 .asset-content.piece-four {
-    border-left: 1px solid var(--black-006);
+    border-left: 1px solid var(--tj-color-border-lightblue);
 }
 
 /* ------------- Hight Light Invest */

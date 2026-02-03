@@ -252,6 +252,7 @@
     :root {
         --tj-fs-body: var(--font-14px);
         --tj-fs-p: var(--font-14px);
+        --tj-fs-sub-p: var(--font-12px);
         --tj-fs-menu: var(--font-14px);
         --tj-fs-title: var(--font-20px);
         --tj-fs-subtitle: var(--font-14px);
@@ -652,6 +653,11 @@ div {
             width: 32px;
             height: 32px;
         }
+    }
+
+    .tji-icon-btn {
+        width: 32px;
+        height: 32px;
     }
 }
 

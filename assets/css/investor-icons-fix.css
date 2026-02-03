@@ -9,10 +9,10 @@ Description: Fix all icon fonts in investor page
 [class*=" tji-"],
 .tji-arrow-up-long,
 i.tji-arrow-up-long,
-#tj-back-to-top,
-#tj-back-to-top *,
+/* #tj-back-to-top,
+#tj-back-to-top *, */
 #tj-back-to-top i,
-#tj-back-to-top-percentage,
+/* #tj-back-to-top-percentage, */
 #tj-back-to-top-percentage i,
 #tj-back-to-top-percentage .tji-arrow-up-long {
     font-family: "bexon-icons" !important;
