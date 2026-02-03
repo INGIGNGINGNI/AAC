@@ -1,0 +1,767 @@
+/*
+Name: 			responsive
+Version: 		1.0.0
+*/
+
+/*===================================================================
+[Table of contents]
+
+---------------------------------------------------------------------
+1. ATTRIBUTE
+
+    1.1 Font Class & Responsive
+    1.2 Space Top/Bottom & Gap
+    1.3 Text Align Control
+    1.4 Button
+    1.5 Widget Setting
+    1.6 Margin & Padding
+    1.7 Hightlight File
+    1.8 Hug Topic
+    1.9 Label File
+    1.10 Width & Height Controller
+    1.11 Gradient Block
+    1.12 Logo
+    
+---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+2. PAGE 
+
+    2.1 IR Home Page
+---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+3. SPARES CSS
+
+    3.1 Accordion Image
+    3.2 Toggle Tabs
+---------------------------------------------------------------------
+
+====================================================================*/
+
+/* ##################################################################
+1. ATTRIBUUTE
+####################################################################*/
+
+/* -----------------------------------------------------------------
+ุ1.1 Font Class & Responsive
+--------------------------------------------------------------------*/
+
+@media (max-width: 991px) {
+    h2 {
+        text-align: center;
+    }
+}
+
+
+/* -----------------------------------------------------------------
+1.2 Space Top/Bottom & Gap
+--------------------------------------------------------------------*/
+
+@media (max-width: 1199px) {
+    .gap-dsk-15 {
+        gap: 0;
+    }
+
+    .lg-spt-100 {
+        padding-top: 100px;
+    }
+}
+
+
+/*------------------------------------------------------------------
+1.3 Text Align Control
+-------------------------------------------------------------------*/
+
+@media (max-width: 991px) {
+    .md-text-center {
+        text-align: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .xs-text-center {
+        text-align: center !important;
+    }
+}
+
+/*------------------------------------------------------------------
+1.4 Button
+-------------------------------------------------------------------*/
+@media (max-width: 1250px) {
+
+    a.button-link-secondary,
+    a.button-link-secondary.disable {
+        font-size: var(--small-text);
+    }
+}
+
+@media (max-width: 1199px) {
+    a.button-stroke {
+        margin-top: 4px;
+    }
+}
+
+@media (max-width: 991px) {
+    a.button-stroke {
+        padding: 9px 7px;
+    }
+}
+
+/*------------------------------------------------------------------
+1.6 Margin & Padding
+-------------------------------------------------------------------*/
+
+@media (max-width: 1199px) {
+    .xl-pr-0.lg-pr-show {
+        padding-left: var(--crd-pd-s);
+    }
+
+    .mgt-lg-24 {
+        margin-top: var(--crd-pd-l);
+    }
+
+    .mgb-lg-24 {
+        margin-bottom: var(--crd-pd-l);
+    }
+}
+
+@media (max-width: 991px) {
+    .mgb-md-24 {
+        margin-bottom: var(--crd-pd-l);
+    }
+
+    .lg-pr-0.md-pr-show {
+        padding-left: var(--crd-pd-s);
+    }
+}
+
+@media (max-width: 767px) {
+    .md-ps-show {
+        padding-left: var(--crd-pd-s) !important;
+    }
+
+    .mgb-sm-24 {
+        margin-bottom: var(--crd-pd-l);
+    }
+}
+
+@media (max-width: 575px) {
+    .mgb-xs-0 {
+        margin-bottom: 0 !important;
+    }
+
+    .mgt-24 {
+        margin-top: 18px;
+    }
+
+    .mgb-24 {
+        margin-bottom: var(--crd-pd-s);
+    }
+
+    .mgb-xs-12 {
+        margin-bottom: var(--crd-pd-s);
+    }
+
+    .spb-24 {
+        padding-bottom: var(--crd-pd-s);
+    }
+
+    .mgt-lg-24 {
+        margin-top: var(--crd-pd-s);
+    }
+
+    .mgb-lg-24 {
+        margin-bottom: var(--crd-pd-s);
+    }
+
+    .mgb-md-24 {
+        margin-bottom: var(--crd-pd-s);
+    }
+
+    .mgb-sm-24 {
+        margin-bottom: var(--crd-pd-s);
+    }
+}
+
+
+/*------------------------------------------------------------------
+1.7 Hightlight File
+-------------------------------------------------------------------*/
+@media (max-width: 1199px) {
+    .snip.h-fix440 {
+        height: 418px;
+    }
+
+    .snip.h-fix440 img {
+        height: 408px;
+    }
+
+    .snip.h-fix440 .image {
+        border-radius: var(--corner-s);
+        overflow: hidden;
+    }
+
+    .w-custom {
+        width: 35%;
+    }
+}
+
+@media (max-width: 991px) {
+
+    /* .snip img {
+        height: 100%;
+    } */
+    .w-custom {
+        width: 43%;
+    }
+}
+
+@media (max-width: 767px) {
+    .snip {
+        height: 240px;
+    }
+
+    .snip.h-fix440 {
+        height: 240px;
+    }
+
+    .snip.h-fix440 img {
+        height: 228px;
+    }
+
+    .w-custom {
+        width: 35%;
+    }
+}
+
+
+/*------------------------------------------------------------------
+1.8 Hug Topic
+-------------------------------------------------------------------*/
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .hug.link-ndownload.none-overflow ul {
+        padding: 0 !important;
+    }
+}
+
+@media (max-width: 1199px) {
+    .presentation .hug.file-ndownload {
+        bottom: 24px;
+    }
+
+    .hug.suptoppic-ncontent {
+        padding: var(--crd-pd-s);
+    }
+}
+
+@media (max-width: 991px) {
+    .hug.link-ndownload {
+        display: block;
+        height: 180px;
+        width: 100%;
+        padding: var(--crd-pd-s) !important;
+        margin-top: var(--crd-pd-s);
+    }
+}
+
+/*------------------------------------------------------------------
+ุ1.9 Label File
+-------------------------------------------------------------------*/
+@media (max-width: 575px) {
+    .label-file.block {
+        padding: var(--crd-pd-s) var(--crd-pd-m);
+    }
+}
+
+/*------------------------------------------------------------------
+1.10 Width & Height Controller
+-------------------------------------------------------------------*/
+
+@media (max-width: 767px) {
+    .w-40.sm-w-20 {
+        width: 20% !important;
+    }
+}
+
+/*------------------------------------------------------------------
+1.11 Gradient Block
+-------------------------------------------------------------------*/
+
+@media (max-width: 575px) {
+    .gradient-blue.block.with-background {
+        background-position: 77% 100%;
+    }
+}
+
+/*------------------------------------------------------------------
+1.12 Logo
+-------------------------------------------------------------------*/
+
+@media (max-width: 1199px) {
+    .logo-on-header {
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0 20px;
+    }
+}
+
+/*===================================================================
+
+/* ##################################################################
+2. PAGE
+####################################################################*/
+
+/*------------------------------------------------------------------
+2.1 IR Home Page
+-------------------------------------------------------------------*/
+
+/* ------------- Banner */
+
+@media (max-width: 1199px) {
+
+    .content-price.piece-one.padding-control,
+    .content-price.piece-two.padding-control,
+    .content-price.piece-three.padding-control,
+    .content-price.piece-four.padding-control {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .holder {
+        gap: 6px;
+    }
+
+    .content-price.piece-one.padding-control,
+    .content-price.piece-two.padding-control,
+    .content-price.piece-three.padding-control,
+    .content-price.piece-four.padding-control {
+        padding-left: 12px;
+    }
+}
+
+
+@media (max-width: 991px) {
+
+    .content-banner.stake-one {
+        padding-left: var(--crd-pd-s);
+        padding-right: var(--crd-pd-s);
+    }
+
+    .content-banner.stake-one p {
+        text-align: center;
+        padding: 0 var(--crd-pd-s);
+        margin-bottom: 20px;
+    }
+
+    .content-banner.stake-two {
+        padding-left: var(--crd-pd-s);
+        padding-right: var(--crd-pd-s);
+    }
+
+    .content-banner.stake-three {
+        padding-left: var(--crd-pd-s);
+        padding-right: var(--crd-pd-s);
+    }
+
+    .content-banner.stake-three p {
+        text-align: center;
+    }
+
+    .content-banner.stake-three p.hint-color,
+    .content-banner.stake-three div.row {
+        padding: 0 var(--crd-pd-s);
+    }
+
+    .content-banner.stake-one.order-control {
+        order: 2;
+    }
+
+    .content-banner.stake-three.order-control {
+        order: 3;
+    }
+
+    .holder {
+        margin-top: var(--crd-pd-s);
+        justify-content: center;
+    }
+
+    .content-price.piece-four.padding-control a {
+        margin-bottom: 6px;
+    }
+}
+
+@media (max-width: 575px) {
+    .holder {
+        gap: 6px;
+        padding: 6px;
+    }
+
+    .content-price.piece-one.padding-control,
+    .content-price.piece-three.padding-control {
+        padding-right: 0px;
+    }
+
+    .content-price.piece-two.padding-control {
+        padding-left: 0px;
+    }
+
+    .content-price.piece-four.padding-control a {
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 449px) {
+
+    .content-price.piece-four.padding-control {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-top: var(--crd-pd-m);
+    }
+
+    .holder {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .row.justify-control {
+        justify-content: center;
+    }
+
+    .content-price.piece-four.padding-control a {
+        margin-bottom: 6px;
+    }
+}
+
+/* ------------- Hight Light Invest */
+
+@media (max-width: 1399px) {
+    .asset-content.piece-one {
+        padding-right: var(--crd-pd-s);
+    }
+
+    .asset-content.piece-two,
+    .asset-content.piece-three,
+    .asset-content.piece-four {
+        padding-left: var(--crd-pd-s);
+        padding-right: var(--crd-pd-s);
+    }
+}
+
+@media (max-width: 1199px) {
+
+    .asset-content.piece-one,
+    .asset-content.piece-two,
+    .asset-content.piece-three,
+    .asset-content.piece-four {
+        padding-right: var(--crd-pd-s);
+        padding-left: var(--crd-pd-s);
+    }
+
+    .asset-content.piece-three {
+        border-left: none;
+    }
+
+    .asset-content.piece-three,
+    .asset-content.piece-four {
+        margin-top: var(--crd-pd-s);
+    }
+
+    .core-business.cover {
+        height: 120px;
+        background-position: center 47%;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .asset-content.piece-two,
+    .asset-content.piece-three,
+    .asset-content.piece-four {
+        padding-right: var(--crd-pd-s);
+        padding-left: var(--crd-pd-s);
+    }
+
+    .asset-content.piece-three {
+        border-left: 1px solid var(--black-006);
+    }
+
+    .asset-content.piece-three,
+    .asset-content.piece-four {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .assets-info.slot {
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .asset-content.piece-one,
+    .asset-content.piece-two,
+    .asset-content.piece-three,
+    .asset-content.piece-four {
+        padding-right: var(--crd-pd-s);
+        padding-left: var(--crd-pd-s);
+    }
+
+    .asset-content.piece-three {
+        border-left: none;
+    }
+
+    .asset-content.piece-one,
+    .asset-content.piece-two {
+        padding-bottom: var(--crd-pd-s);
+    }
+
+    .asset-content.piece-three,
+    .asset-content.piece-four {
+        padding-top: var(--crd-pd-s);
+        border-top: 1px solid var(--black-006);
+    }
+
+    .crop-cover {
+        margin-top: var(--crd-pd-l);
+    }
+}
+
+@media (max-width: 575px) {
+    .widget-card-st {
+        padding: var(--crd-pd-l) var(--crd-pd-s) var(--crd-pd-s);
+    }
+
+    .assets-info.slot h2 {
+        margin-top: 6px;
+    }
+}
+
+/* ------------- Info for Investor */
+
+@media (max-width: 1399px) {
+    .info-for-invest.description {
+        padding: var(--crd-pd-s);
+    }
+}
+
+
+@media (max-width: 991px) {
+
+    .col-tool-pdd-ctrl:first-child,
+    .col-tool-pdd-ctrl:nth-child(3),
+    .col-tool-pdd-ctrl:nth-child(5) {
+        padding-left: var(--crd-pd-s);
+        padding-right: 6px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+
+    .col-tool-pdd-ctrl:nth-child(2),
+    .col-tool-pdd-ctrl:nth-child(4),
+    .col-tool-pdd-ctrl:nth-child(6) {
+        padding-left: 6px;
+        padding-right: var(--crd-pd-s);
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+
+    .col-tool-pdd-ctrl:nth-child(5),
+    .col-tool-pdd-ctrl:nth-child(6) {
+        padding-bottom: 0;
+    }
+
+    .inner-card.footer {
+        padding: var(--crd-pd-s) 0 0;
+    }
+}
+
+@media (max-width: 575px) {
+
+    .col-tool-pdd-ctrl:first-child,
+    .col-tool-pdd-ctrl:nth-child(3),
+    .col-tool-pdd-ctrl:nth-child(5) {
+        padding-left: var(--crd-pd-s);
+        padding-right: var(--crd-pd-s);
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+
+    .col-tool-pdd-ctrl:nth-child(2),
+    .col-tool-pdd-ctrl:nth-child(4) {
+        padding-left: var(--crd-pd-s);
+        padding-right: var(--crd-pd-s);
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+
+    .col-tool-pdd-ctrl:nth-child(6) {
+        padding-left: var(--crd-pd-s);
+        padding-right: var(--crd-pd-s);
+        padding-top: 6px;
+        padding-bottom: 0px;
+    }
+
+    .info-for-invest.description {
+        height: auto;
+        padding-bottom: 0;
+    }
+
+    .inner-card.footer {
+        padding-bottom: 0;
+    }
+
+    .section-divide {
+        padding: var(--crd-pd-l) var(--crd-pd-m) var(--crd-pd-m);
+    }
+}
+
+/* ------------- Social Environment */
+
+@media (max-width: 1399px) {
+    .stand-alone {
+        width: 8.5vw;
+    }
+
+    .inner-card-l.card-shortcut.background {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 1199px) {
+    .stand-alone {
+        width: 11vw;
+    }
+}
+
+@media (max-width: 991px) {
+    .widget-card-parallel.flex-height-ctrl .md-setscreen {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 767px) {
+    .widget-card-parallel.flex-height-ctrl .md-setscreen {
+        flex-direction: column;
+    }
+
+    .stand-alone {
+        width: 22vw;
+    }
+}
+
+@media (max-width: 575px) {
+    .inner-card-l {
+        padding: var(--crd-pd-l) var(--crd-pd-s) var(--crd-pd-s) var(--crd-pd-l);
+    }
+}
+
+@media (max-width: 449px) {
+    .stand-alone {
+        width: 120px;
+    }
+
+    .count-tag-status.block {
+        margin-bottom: var(--crd-pd-s);
+    }
+}
+
+/* ------------- Financial highlights */
+
+@media (max-width: 1199px) {
+    .tab__content {
+        margin-top: 32px;
+    }
+}
+
+
+/* ##################################################################
+3. SPARES CSS
+####################################################################*/
+
+/*------------------------------------------------------------------
+3.1 Accordion Image
+-------------------------------------------------------------------*/
+
+@media (max-width: 1399px) {
+    .caption-accordion p {
+        font-size: var(--small-text);
+    }
+}
+
+@media (max-width: 991px) {
+    .tab-accordion.active {
+        display: block;
+        height: 275px;
+        background: var(--blue-gradient-deg90);
+        width: 100%;
+        /* margin: 0; */
+    }
+
+    .tab-accordion.active img.inner-cover {
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all .5s ease;
+    }
+
+    .tab-accordion {
+        /* display: none; */
+        width: 15%;
+    }
+}
+
+@media (max-width: 767px) {
+    .tab-accordion {
+        width: 20%;
+        height: 240px;
+    }
+
+    .tab-accordion.active {
+        height: 240px;
+    }
+}
+
+@media (max-width: 575px) {
+    .tab-accordion {
+        display: none;
+    }
+
+    .tab-accordion.active {
+        margin: 0;
+    }
+
+    .caption-accordion p {
+        font-size: var(--hint-text);
+    }
+}
+
+/*------------------------------------------------------------------
+3.2 Toggle Tabs
+-------------------------------------------------------------------*/
+@media (max-width: 392px) {
+    /* #one:checked~.tabs #one-tab,
+    #two:checked~.tabs #two-tab {
+      width: 100%;
+    } */
+
+    .tabs {
+        border-radius: 999px;
+    }
+
+    .tab {
+        margin: 0;
+    }
+}

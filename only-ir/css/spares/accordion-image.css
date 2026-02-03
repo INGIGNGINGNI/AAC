@@ -1,0 +1,158 @@
+/*
+Name: 			accordion-image
+Version: 		1.0.0
+*/
+
+/*===================================================================
+[Table of contents]
+
+---------------------------------------------------------------------
+1. Toggle Tabs Style
+---------------------------------------------------------------------
+
+====================================================================*/
+
+/* ------------------------------------------------------------------
+1. Accordion Image
+--------------------------------------------------------------------- */
+
+/* ---- Create Accordion --- */
+
+.accordion-image {
+    max-width: 1080px;
+    max-height: 275px;
+    height: 100%;
+    display: flex;
+    margin: 10px auto 0 auto;
+}
+
+.tab-accordion {
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    width: 20%;
+    height: 100%;
+    background: var(--blue-gradient-deg90);
+    cursor: pointer;
+    margin: 0 10px 0 0;
+    border-radius: var(--corner-s);
+    transition: width .5s ease;
+}
+
+.tab-accordion.active {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: none;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+    border-radius: var(--corner-s);
+    padding: 10px 0 0 0;
+    transition: width .5s ease;
+}
+
+.tab-accordion:last-child {
+    margin: 0 0 0 0;
+}
+
+.tab-accordion img.inner-cover {
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: all .5s ease;
+}
+
+.tab-accordion.active img.inner-cover {
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .5s ease;
+}
+
+.tab-accordion .caption-accordion {
+    height: 100%;
+}
+
+.tab-accordion.active .caption-accordion {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 2;
+    white-space: nowrap;
+    bottom: 0;
+    background: var(--blue-gradient);
+}
+
+.tab-accordion.active .caption-accordion p {
+    width: 100%;
+    position: static;
+    bottom: 0px;
+    left: 0px;
+    transform: rotate(0deg);
+}
+
+.caption-accordion p {
+    width: 200px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(270deg);
+    margin: 0;
+    color: var(--white-color);
+}
+
+
+/* --- Hover Effects --- */
+
+.tab-accordion:hover img.inner-cover {
+    opacity: 1;
+}
+
+.tab-accordion:hover {
+    width: 100%;
+}
+
+.tab-accordion.active {
+    width: 80%;
+}
+
+.tab-accordion:hover .caption-accordion p {
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    z-index: 2;
+    white-space: nowrap;
+    background: var(--blue-gradient);
+    bottom: 0px;
+    left: 0px;
+    top: unset;
+    transform: rotate(0deg);
+}
+
+.tab-accordion.active .hug.double-button {
+    display: inline-flex;
+}
+
+.tab-accordion .hug.double-button {
+    display: none;
+}
+
+.tab-accordion:hover .hug.double-button {
+    display: inline-flex;
+}
+
+.tab-accordion.active:hover .caption-accordion {
+    background: none;
+}

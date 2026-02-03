@@ -1,0 +1,1214 @@
+/*
+Name: Investor Relations Bridge CSS
+Version: 1.0.0
+Description: Bridge CSS to integrate IR styles with main project
+*/
+
+/* Override IR colors to match main theme */
+:root {
+    /* Override primary color */
+    --primary-color: #124EA0 !important;
+
+    /* Override text colors */
+    --black-000: #262626 !important;
+    --black-002: #595959 !important;
+
+    --tj-color-highlight-dark: #0A2C5B;
+    --tj-color-highlight-red: #E60000;
+    --tj-color-highlight-lightblue: #99B3D6;
+
+    --tj-color-card-background-white: #FFF;
+
+    --tj-color-tab-background: #FAFAFA;
+    --tj-color-tab-background-active: #FFF;
+
+    --tj-color-border-lightgrey: #F0F0F0;
+
+    --gray-blue-gradient-deg318: linear-gradient(318deg, rgba(38, 38, 38, 0.00) 6.99%, #124EA0 83.1%);
+
+
+    /* Override font family */
+    --body-font: 'Prompt', sans-serif !important;
+}
+
+/* Force Prompt font on ALL elements including header */
+body,
+html {
+    font-family: 'Prompt', sans-serif !important;
+}
+
+/* Apply to most elements but with lower specificity than icons */
+body *:not(.material-symbols-rounded):not([class*="material-symbols"]) {
+    font-family: 'Prompt', sans-serif !important;
+}
+
+p {
+    margin: 0;
+    line-height: 150%;
+}
+
+h2 {
+    font-weight: var(--tj-fw-medium);
+}
+
+small {
+    font-size: var(--font-12px);
+}
+
+a.button-link-icon {
+    color: var(--tj-color-theme-primary);
+
+    :hover {
+        color: var(--tj-color-theme-bg-hover);
+    }
+}
+
+.site-main {
+    padding-bottom: var(--spacing-96px);
+}
+
+@media screen and (max-width: 991px) {
+    .site-main {
+        padding-bottom: var(--spacing-56px);
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .site-main {
+        padding-bottom: var(--spacing-40px);
+    }
+}
+
+/* Ensure Material Icons are NEVER overridden */
+.material-symbols-rounded,
+span.material-symbols-rounded,
+.material-symbols-rounded *,
+[class*="material-symbols"],
+.button-stroke .material-symbols-rounded,
+.button-icon .material-symbols-rounded,
+a .material-symbols-rounded {
+    font-family: 'Material Symbols Rounded' !important;
+}
+
+/* Specifically target header elements */
+.header-area,
+.header-area *,
+.mainmenu,
+.mainmenu *,
+.hamburger-area,
+.hamburger-area *,
+.site_logo,
+.menu-area,
+.header-right-item {
+    font-family: 'Prompt', sans-serif !important;
+}
+
+/* Force Prompt font on all IR elements */
+.widget-card-st,
+.widget-card-parallel,
+.inner-card-m,
+.inner-card-l,
+.section-divide,
+.hero-banner,
+.news-ticker,
+.info-for-invest,
+.gradient-blue,
+.hug,
+.label-file,
+.snip,
+.accordion-image,
+.tabs-aria,
+.panels {
+    font-family: 'Prompt', sans-serif !important;
+}
+
+/* Override all text elements in IR sections BUT NOT icons */
+.widget-card-st h1,
+.widget-card-st h2,
+.widget-card-st h3,
+.widget-card-st h4,
+.widget-card-st h5,
+.widget-card-st h6,
+.widget-card-st p,
+.widget-card-st a,
+.widget-card-parallel h1,
+.widget-card-parallel h2,
+.widget-card-parallel h3,
+.widget-card-parallel h4,
+.widget-card-parallel h5,
+.widget-card-parallel h6,
+.widget-card-parallel p,
+.widget-card-parallel a {
+    font-family: 'Prompt', sans-serif !important;
+}
+
+/* Ensure spans use Prompt EXCEPT Material Icons */
+.widget-card-st span:not(.material-symbols-rounded),
+.widget-card-parallel span:not(.material-symbols-rounded) {
+    font-family: 'Prompt', sans-serif !important;
+}
+
+/* Override conflicts between main project and IR styles */
+
+/* Ensure IR widgets work properly */
+.widget-card-st {
+    background: var(--white-color, #ffffff);
+    border-radius: var(--corner-s, 18px);
+    padding: var(--crd-pd-s, 12px);
+    box-shadow: var(--shadow-s, 0px 0px 9px 0px rgba(145, 151, 203, 0.15));
+}
+
+/* Fix spacing for IR sections */
+.section-gap {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* Ensure smooth scrolling works with IR content */
+#smooth-wrapper {
+    overflow: visible;
+}
+
+/* Fix IR banner positioning */
+.spt-110 {
+    padding-top: 110px;
+}
+
+.lg-spt-100 {
+    padding-top: 100px;
+}
+
+/* Ensure IR buttons work with main theme */
+a.primary-button.with-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Fix Material Icons sizing and ensure proper font family */
+.material-symbols-rounded {
+    font-family: 'Material Symbols Rounded' !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    font-size: 24px !important;
+    line-height: 1 !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+    word-wrap: normal !important;
+    direction: ltr !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    text-rendering: optimizeLegibility !important;
+    font-feature-settings: 'liga' !important;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 300,
+        'GRAD' 0,
+        'opsz' 24 !important;
+}
+
+/* Specifically fix button icons */
+.button-stroke .material-symbols-rounded,
+.button-icon .material-symbols-rounded,
+a.button-stroke span.material-symbols-rounded,
+a.button-icon span.material-symbols-rounded {
+    font-family: 'Material Symbols Rounded' !important;
+}
+
+/* Ensure IR cards stack properly on mobile */
+@media (max-width: 991px) {
+    .lg-spt-100 {
+        padding-top: 80px;
+    }
+
+    .mgb-md-24 {
+        margin-bottom: 24px;
+    }
+
+    .lg-pe-0 {
+        padding-right: 0 !important;
+    }
+
+    .md-pr-show {
+        padding-right: 12px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .mgb-sm-24 {
+        margin-bottom: 24px;
+    }
+
+    .sm-pr-show {
+        padding-right: 12px !important;
+    }
+}
+
+/* Fix IR specific components */
+.assets-info.slot {
+    text-align: center;
+    padding: 12px;
+}
+
+.content-price {
+    padding: 8px;
+}
+
+/* Ensure tabs work properly */
+.tabs-aria input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Fix accordion images */
+.accordion-image {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Ensure proper z-index for IR elements */
+.yellow-tag {
+    z-index: 10;
+}
+
+/* Fix IR hover effects */
+.news-ticker.slot:hover {
+    cursor: pointer;
+    background-color: var(--background-blue-soft, #f7f9ff);
+    border-left-color: var(--secondary-color, #3270FF);
+}
+
+/* Ensure IR charts render properly */
+#echart_2024,
+#echart_2023,
+#echart_2022,
+#echart_line_2022 {
+    width: 100%;
+    min-height: 260px;
+}
+
+/* Fix IR gradient backgrounds */
+.gradient-blue.block {
+    background: var(--gray-blue-gradient-degn, linear-gradient(406deg, rgba(0, 18, 61, 0.00) 50%, #3270FF 523%));
+    border-radius: var(--corner-s, 18px);
+    padding: 24px 12px 12px 12px;
+}
+
+/* Ensure IR images scale properly */
+.snip img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Fix IR button groups */
+.hug.double-button {
+    display: inline-flex;
+    gap: 8px;
+}
+
+/* Ensure proper spacing for IR sections */
+.section-divide {
+    background: var(--background-section, #F3F3F3);
+    padding: 24px;
+    border-radius: var(--corner-s, 18px);
+    margin-bottom: 24px;
+}
+
+/* Fix IR link styles */
+.button-link-primary {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.button-link-primary:hover {
+    text-decoration: none;
+}
+
+/* Ensure IR panels scroll properly */
+.panels {
+    overflow-y: auto;
+    max-height: 272px;
+    margin-top: var(--spacing-16px);
+}
+
+/* Fix IR responsive images */
+.circle-profile img {
+    width: 100%;
+    height: auto;
+}
+
+/* Ensure IR cards have consistent heights */
+.widget.maxh-ctrl .maxh-100 {
+    height: 100%;
+}
+
+/* Fix IR tool cards hover effects */
+.inner-card-m {
+    transition: all 0.5s ease;
+}
+
+/* Ensure IR accordion works on mobile */
+@media (max-width: 767px) {
+    .accordion-image {
+        flex-direction: column;
+    }
+
+    .tab-accordion {
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+}
+
+/* Fix IR content alignment */
+.md-text-center {
+    text-align: left;
+}
+
+@media (max-width: 991px) {
+    .md-text-center {
+        text-align: center;
+    }
+}
+
+/* Ensure IR buttons are visible */
+.button-stroke,
+.button-icon {
+    z-index: 5;
+    position: relative;
+}
+
+/* Fix IR file download sections */
+.hug.link-ndownload ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Ensure IR animations work */
+.wow {
+    visibility: hidden;
+}
+
+.wow.animated {
+    visibility: visible;
+}
+
+/* Fix IR spacing utilities */
+.mgt-12 {
+    margin-top: 12px;
+}
+
+.mgt-24 {
+    margin-top: 24px;
+}
+
+.mgt-30 {
+    margin-top: 30px;
+}
+
+.mgb-12 {
+    margin-bottom: 12px;
+}
+
+.mgb-24 {
+    margin-bottom: 24px;
+}
+
+.mgb-4 {
+    margin-bottom: 4px;
+}
+
+/* Ensure IR colors work properly */
+.black-color {
+    color: #262626 !important;
+}
+
+.text-color {
+    color: #595959 !important;
+}
+
+.hint-color {
+    color: var(--black-003, #A3A4A6);
+}
+
+.seconndary-color {
+    color: var(--secondary-color, #3270FF);
+}
+
+.danger-color {
+    color: var(--danger-color, #E60000);
+}
+
+.positive-color {
+    color: var(--positive-color, #00BE8F);
+}
+
+.icon-color {
+    color: var(--icon-color, #7A808C);
+}
+
+/* main#primary {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+} */
+
+/* Override primary color in all IR components */
+.primary-button,
+a.primary-button.with-icon,
+.button-link-primary {
+    background-color: #124EA0 !important;
+}
+
+.primary-button:hover,
+a.primary-button.with-icon:hover {
+    background-color: #0F4288 !important;
+}
+
+/* Override text body color */
+p {
+    color: #595959;
+}
+
+/* Override heading colors */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #262626;
+}
+
+/* Override IR specific text colors */
+/* .widget-card-st p,
+.widget-card-parallel p,
+.section-divide p,
+.info-for-invest p {
+    color: #595959 !important;
+} */
+
+.widget-card-st h2,
+.widget-card-parallel h2,
+.section-divide h2 {
+    color: #262626 !important;
+}
+
+/* Fix IR card shadows */
+.widget-card-parallel {
+    box-shadow: var(--shadow-s, 0px 0px 9px 0px rgba(145, 151, 203, 0.15));
+}
+
+/* Ensure mega menu submenu switching works properly */
+.mainmenu ul>li>.mega-menu-pages .mega-menu-pages-single.submenu {
+    display: none !important;
+}
+
+.mainmenu ul>li>.mega-menu-pages .mega-menu-pages-single.submenu.active {
+    display: grid !important;
+    grid-template-columns: 1fr 490px;
+    gap: var(--spacing-64px);
+}
+
+/* Make sure main menu links are clickable */
+.mainmenu ul>li>.mega-menu-pages .mega-menu-list a.mega-menu-main-link {
+    cursor: pointer;
+    pointer-events: auto;
+    user-select: none;
+}
+
+/* Prevent link default behavior for submenu switching */
+.mainmenu ul>li>.mega-menu-pages .mega-menu-list a.mega-menu-main-link[href="#"],
+.mainmenu ul>li>.mega-menu-pages .mega-menu-list a.mega-menu-main-link[href="javascript:void(0)"] {
+    pointer-events: auto;
+}
+
+@media screen and (max-width: 1599px) {
+    .mainmenu ul>li>.mega-menu-pages .mega-menu-pages-single.submenu.active {
+        grid-template-columns: 1fr 390px;
+    }
+}
+
+.circle-profile {
+    border: solid var(--white-color) 6px;
+
+    img {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.widget-card-parallel {
+    padding: var(--spacing-12px);
+    border-radius: var(--radius-16px);
+}
+
+.widget-card-st {
+    background: var(--tj-color-card-background-white);
+    border-radius: var(--radius-16px);
+    padding: var(--spacing-24px);
+    box-shadow: 0 0 9px 0 rgba(145, 151, 203, 0.10);
+}
+
+.widget-card-parallel.flex-height-ctrl,
+.widget-card-parallel.flex-height-ctrl .md-setscreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing-12px);
+}
+
+.hero-banner {
+    padding: var(--spacing-96px) var(--spacing-none);
+    border-radius: var(--radius-8px);
+
+    h1 {
+        font-size: var(--tj-fs-title);
+        font-weight: var(--tj-fw-medium);
+        padding: var(--spacing-none);
+        margin: var(--spacing-none);
+    }
+}
+
+.hint-color {
+    color: var(--tj-color-text-body-3);
+}
+
+.tabs {
+    width: 100%;
+    background-color: var(--tj-color-tab-background);
+    padding: var(--spacing-8px);
+    border-radius: var(--radius-rounded);
+}
+
+.tab {
+    padding: var(--spacing-8px) var(--spacing-12px);
+}
+
+#one-tab,
+#two-tab {
+    color: var(--tj-color-text-body-3);
+    border-radius: var(--radius-rounded);
+    width: fit-content;
+}
+
+#one:checked~.tabs #one-tab,
+#two:checked~.tabs #two-tab {
+    background: var(--tj-color-tab-background-active);
+    box-shadow: 0 0 9px 1px rgba(145, 151, 203, 0.10);
+    color: var(--tj-color-common-black);
+    border-radius: var(--radius-rounded);
+    width: fit-content;
+}
+
+label.btn-tabs {
+    width: fit-content;
+    border: 1px solid var(--tj-color-border-0);
+    color: var(--tj-color-text-body-3);
+    border-radius: var(--radius-rounded);
+    padding: 7px var(--spacing-16px);
+}
+
+.tabs-aria label:hover {
+    color: var(--tj-color-text-body-3);
+}
+
+.tabs-aria [id^="tab"]:checked+label {
+    color: var(--tj-color-common-white);
+    background-color: var(--tj-color-tab-text-active);
+}
+
+.yellow-tag {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 12px;
+    background: var(--tj-color-common-white);
+    border-radius: var(--radius-rounded);
+    padding: var(--spacing-4px) var(--spacing-12px);
+    color: var(--danger-color);
+}
+
+.snip.black-alpha-cover figcaption:before {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
+}
+
+
+
+/**
+  Banner CSS
+*/
+.banner {
+    margin-top: var(--spacing-24px);
+
+    .banner-content-grid {
+        display: grid;
+        grid-template-columns: 1fr 284px 1fr;
+        gap: 0;
+        align-items: center;
+        margin-top: -32px;
+
+        .content-one {
+            padding: var(--spacing-none) var(--spacing-12px);
+
+            p {
+                margin: var(--spacing-none);
+            }
+        }
+
+        .content-two {
+            text-align: center;
+
+            .title-text {
+                font-size: var(--tj-fs-h4);
+                font-weight: var(--tj-fw-medium);
+                margin-bottom: var(--spacing-12px);
+                line-height: 150%;
+            }
+        }
+
+        .content-three {
+            padding: var(--spacing-none) var(--spacing-12px);
+
+            .subtext {
+                font-size: var(--tj-fs-sub-p);
+                font-weight: var(--tj-fw-regular);
+            }
+
+            .price-content-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 24px;
+                margin-top: var(--spacing-16px);
+
+                .price-box {
+                    display: flex;
+                    gap: var(--spacing-12px);
+
+                    h2 {
+                        padding-bottom: var(--spacing-4px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/**
+  จุดเด่นด้านการลงทุน CSS
+*/
+.hightlight-invest {
+
+    .widget-card-st {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-16px);
+
+        .assets-info.slot {
+            text-align: start;
+            padding: var(--spacing-none);
+
+            h2 {
+                color: var(--tj-color-highlight-dark) !important;
+                margin-top: var(--spacing-8px);
+            }
+        }
+
+        .core-business.cover {
+            background-image: url(../../only-ir/images/resource/core-business.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 176px;
+            border-radius: var(--radius-12px);
+        }
+    }
+}
+
+
+
+/**
+  ข่าวสารล่าสุด CSS
+*/
+.lastest-news {
+
+    .widget-card-st {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-12px);
+
+        .news-ticker.slot {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-4px);
+            border-left: solid var(--tj-color-highlight-red) 2px;
+            padding: var(--spacing-12px) var(--spacing-24px);
+            margin: var(--spacing-16px) var(--spacing-none);
+
+            .date {
+                color: var(--tj-color-text-body-3) !important;
+            }
+
+            &:first-child {
+                margin-top: var(--spacing-none);
+            }
+
+            &:last-child {
+                margin-bottom: var(--spacing-none);
+            }
+        }
+    }
+}
+
+
+
+/**
+  ข้อมูลสำหรับนักลงทุน CSS
+*/
+.info-invest {
+    .widget-card-parallel {
+
+        h2 {
+            padding-left: var(--spacing-12px);
+            margin-bottom: var(--spacing-none);
+            line-height: 150%;
+        }
+
+        .inner-card-m {
+            background: var(--tj-color-theme-bg);
+            border-radius: var(--radius-12px);
+            padding: var(--spacing-12px);
+            height: 100%;
+
+            .info-for-invest.block {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: var(--spacing-32px);
+                border-radius: var(--radius-12px);
+
+                .info-for-invest.description {
+                    display: flex;
+                    flex-direction: column;
+                    gap: var(--spacing-30px);
+                    height: auto;
+                    padding: var(--spacing-12px) var(--spacing-12px) var(--spacing-none);
+
+                    span {
+                        font-size: 32px !important;
+                        color: var(--tj-color-highlight-lightblue);
+                    }
+
+                    .title {
+                        font-size: var(--tj-fs-h5);
+                        font-weight: var(--tj-fw-medium);
+                        line-height: 150%;
+                        padding-bottom: var(--spacing-8px);
+                    }
+
+                    .desc {
+                        font-size: var(--tj-fs-p);
+                        font-weight: var(--tj-fw-regular);
+                        line-height: 150%;
+                        color: var(--tj-color-text-body-3) !important;
+                    }
+                }
+            }
+        }
+    }
+
+    #tool-one:hover span,
+    #tool-two:hover span,
+    #tool-three:hover span,
+    #tool-four:hover span,
+    #tool-five:hover span,
+    #tool-six:hover span {
+        color: var(--white-color) !important;
+    }
+}
+
+
+
+/**
+  สังคมและสิ่งแวดล้อม CSS
+*/
+.social-environment {
+    .widget-card-parallel {
+
+        h2 {
+            padding-left: var(--spacing-12px);
+            margin-bottom: var(--spacing-none);
+            line-height: 150%;
+        }
+
+        .inner-card-l {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: var(--spacing-24px);
+            border-radius: var(--radius-12px);
+
+            .holder {
+                padding: var(--spacing-12px) var(--spacing-12px) var(--spacing-none);
+
+                .title {
+                    font-size: var(--tj-fs-h5);
+                    font-weight: var(--tj-fw-medium);
+                    line-height: 150%;
+                    padding-bottom: var(--spacing-8px);
+                    color: var(--tj-color-text-body-dark) !important;
+                }
+
+                .desc {
+                    font-size: var(--tj-fs-p);
+                    font-weight: var(--tj-fw-regular);
+                    line-height: 150%;
+                    color: var(--tj-color-text-body-dark) !important;
+                }
+            }
+        }
+
+        .inner-card-l.esg {
+            background-image: url(../../only-ir/images/resource/esg.webp);
+        }
+
+        .inner-card-l.csr {
+            background-image: url(../../only-ir/images/resource/csr.webp);
+        }
+    }
+}
+
+
+
+/**
+  ข้อมูลทางการเงิน CSS
+*/
+.financial-h {
+    .section-divide {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-12px);
+        background: var(--tj-color-theme-bg);
+        padding: var(--spacing-12px);
+        border-radius: var(--radius-16px);
+        margin-bottom: var(--spacing-none);
+
+        .section-title {
+            color: var(--tj-color-theme-primary) !important;
+            padding-left: var(--spacing-12px);
+            margin-bottom: var(--spacing-none);
+            line-height: 150%;
+        }
+
+        .widget-card-parallel {
+            border-radius: var(--radius-12px);
+        }
+
+        .bar-chart {
+            padding-right: calc(var(--spacing-12px) / 2);
+        }
+
+        .line-chart {
+            padding-left: calc(var(--spacing-12px) / 2);
+
+            .hug.suptoppic-ncontent {
+                padding: var(--spacing-none);
+                margin-top: var(--spacing-12px);
+
+                p {
+                    margin: var(--spacing-none);
+                }
+            }
+        }
+    }
+}
+
+
+
+/**
+  เอกสารนำเสนอและเว็บแคสต์ CSS
+*/
+.publication {
+    .section-divide {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-12px);
+        background: var(--tj-color-theme-bg);
+        padding: var(--spacing-12px);
+        border-radius: var(--radius-16px);
+        margin-bottom: var(--spacing-none);
+
+        .section-title {
+            color: var(--tj-color-theme-primary) !important;
+            padding-left: var(--spacing-12px);
+            margin-bottom: var(--spacing-none);
+            line-height: 150%;
+        }
+
+        .widget-card-parallel {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-12px);
+
+            .snip {
+                max-height: 236px;
+                border-radius: var(--radius-12px);
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    inset: 0;
+                    border-radius: var(--spacing-12px);
+                    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
+                }
+
+                figcaption {
+                    &::before {
+                        display: none;
+                    }
+                }
+
+                .hug.file-ndownload {
+
+                    .label-file.block {
+                        width: 100%;
+                        background-color: var(--tj-color-card-background-white);
+                        border-radius: var(--radius-12px);
+                        padding: var(--spacing-16px);
+                        margin-right: var(--spacing-12px);
+
+                        p {
+                            color: var(--tj-color-link-default) !important;
+                        }
+                    }
+
+                    .file-button {
+                        display: flex;
+                        align-items: center;
+                        gap: var(--spacing-12px);
+
+                        .tji-icon-btn {
+                            span {
+                                -webkit-transform: rotate(0);
+                                -ms-transform: rotate(0);
+                                transform: rotate(0);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .one-report {
+            padding-right: calc(var(--spacing-12px) / 2);
+
+            .snip {
+                .image {
+
+                    img {
+                        position: relative;
+                        bottom: 112px;
+                    }
+                }
+            }
+        }
+
+        .filling {
+            padding-left: calc(var(--spacing-12px) / 2);
+            padding-right: calc(var(--spacing-12px) / 2);
+
+            .snip {
+                .image {
+
+                    img {
+                        position: relative;
+                        bottom: 222px;
+                    }
+                }
+            }
+        }
+
+        .webcast {
+            padding-left: calc(var(--spacing-12px) / 2);
+
+            .snip {
+                .image {
+
+                    img {
+                        position: relative;
+                        bottom: 260px;
+                    }
+                }
+            }
+        }
+
+        .presentation {
+            .hug.link-ndownload {
+                margin-top: var(--spacing-12px);
+                max-height: 184px;
+
+                ul {
+                    li {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: var(--spacing-12px);
+                        border-bottom: 1px solid var(--tj-color-border-lightgrey);
+                        padding: var(--spacing-12px) var(--spacing-none);
+
+                        &:first-child {
+                            padding-top: var(--spacing-none);
+                        }
+
+                        &:last-child {
+                            padding-bottom: var(--spacing-none);
+                            border-bottom: none;
+                        }
+
+                        p {
+                            display: -webkit-box;
+                            -webkit-line-clamp: 1;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            color: var(--tj-color-link-default) !important;
+                            margin-bottom: var(--spacing-none);
+                        }
+
+                        .li-button {
+                            display: flex;
+                            gap: var(--spacing-12px);
+                        }
+                    }
+                }
+            }
+
+            .snip {
+                &::after {
+                    display: none;
+                }
+
+                .image {
+
+                    img {
+                        position: relative;
+                        bottom: 100px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/**
+  ช่องทางการติดต่อเรา CSS
+*/
+.contact {
+    .section-divide {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-12px);
+        background: var(--tj-color-theme-bg);
+        padding: var(--spacing-12px);
+        border-radius: var(--radius-16px);
+        margin-bottom: var(--spacing-none);
+
+        .section-title {
+            color: var(--tj-color-theme-primary) !important;
+            padding-left: var(--spacing-12px);
+            margin-bottom: var(--spacing-none);
+            line-height: 150%;
+        }
+
+        .widget-card-parallel {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-12px);
+
+            .gradient-blue.block {
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing-24px);
+                padding: var(--spacing-24px) var(--spacing-12px);
+                border-radius: var(--radius-8px);
+
+                .content-inner {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: var(--spacing-8px);
+                    height: 100%;
+
+                    .contact-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        gap: var(--spacing-24px);
+
+                        .contact-detail {
+                            display: flex;
+                            flex-direction: column;
+                            gap: var(--spacing-8px);
+                            
+                            a {
+                                width: fit-content;
+                                gap: var(--spacing-12px);
+                                color: var(--tj-color-text-body);
+
+                                span {
+                                    color: var(--tj-color-icon-primary);
+                                }
+
+                                span.fill {
+                                    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24 !important;
+                                }
+
+                                &:hover {
+                                    color: var(--tj-color-icon-primary);
+                                }
+                            }
+                        }
+
+                        .location-detail {
+                            display: flex;
+                            flex-direction: column;
+                            gap: var(--spacing-8px);
+
+                            p:first-child {
+                                color: var(--tj-color-text-body-dark) !important;
+                            }
+                        }
+                    }
+
+                    .button-inner {
+                        padding-top: var(--spacing-8px);
+                    }
+                }
+            }
+
+            .gradient-blue.block.with-background {
+                height: 100%;
+            }
+        }
+    }
+}
+
+
+.tj-footer-section {
+    bottom: var(--spacing-36px);
+}

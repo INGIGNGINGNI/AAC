@@ -1,0 +1,68 @@
+/*
+Name: 			text-scrolling
+Version: 		1.0.0
+*/
+
+/*===================================================================
+[Table of contents]
+
+---------------------------------------------------------------------
+1. Text Scrolling
+---------------------------------------------------------------------
+
+====================================================================*/
+
+/* ------------------------------------------------------------------
+1. Text Scrolling
+--------------------------------------------------------------------- */
+
+.one-line {
+    width: 100%;
+    display: inline-block;
+    /* important */
+    white-space: nowrap;
+    overflow: hidden;
+    /* when not hovering show ellipsis */
+    /* animate on either hover or focus */
+    /* define the animation */
+}
+
+.one-line span {
+    color: var(--black-002);
+}
+
+.one-line:not(:hover) {
+    text-overflow: ellipsis;
+}
+
+.one-line:hover span,
+.one-line:focus span {
+    display: inline-block;
+    animation-name: scroll-text;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    /* FYI this would be the shorthand:
+      animation: scroll-text 5s ease 0s 2 normal;
+    */
+}
+
+@keyframes scroll-text {
+    0% {
+        transform: translateX(0%);
+    }
+
+    90% {
+        transform: translateX(-100%);
+    }
+
+    95% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}

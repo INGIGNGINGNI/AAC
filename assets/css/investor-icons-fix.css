@@ -1,0 +1,49 @@
+/*
+Name: Investor Icons Fix CSS
+Version: 1.0.0
+Description: Fix all icon fonts in investor page
+*/
+
+/* Ensure bexon-icons (custom icons like back-to-top) work */
+[class^="tji-"],
+[class*=" tji-"],
+.tji-arrow-up-long,
+i.tji-arrow-up-long,
+#tj-back-to-top,
+#tj-back-to-top *,
+#tj-back-to-top i,
+#tj-back-to-top-percentage,
+#tj-back-to-top-percentage i,
+#tj-back-to-top-percentage .tji-arrow-up-long {
+    font-family: "bexon-icons" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    line-height: 1 !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    speak: never !important;
+}
+
+/* Ensure Material Icons work */
+.material-symbols-rounded,
+span.material-symbols-rounded,
+[class*="material-symbols"] {
+    font-family: 'Material Symbols Rounded' !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+}
+
+/* Ensure Font Awesome icons work if used */
+[class^="fa-"],
+[class*=" fa-"],
+.fa,
+.fas,
+.far,
+.fal,
+.fab {
+    font-family: "Font Awesome 6 Pro" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+}

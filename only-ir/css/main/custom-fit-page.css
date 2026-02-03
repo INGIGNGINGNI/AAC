@@ -1,0 +1,285 @@
+/*
+Name: 			custom fit page
+Version: 		1.0.0
+*/
+
+/*===================================================================
+[Table of contents]
+
+1. IR Home Page
+
+====================================================================*/
+
+/*------------------------------------------------------------------
+1. IR Home Page
+-------------------------------------------------------------------*/
+
+/* ------------- Banner */
+
+.hero-banner {
+    background-image: url(../../images/banner/hero-banner.webp);
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 70px 0;
+    border-radius: var(--corner-s);
+}
+
+.circle-profile {
+    position: relative;
+    max-width: 105px;
+    margin: 0px auto;
+    top: -50px;
+    background: var(--background-blue-soft);
+    border-radius: var(--corner-xl);
+    border: solid var(--white-color) 8px;
+    box-shadow: var(--shadow-s-dark);
+
+}
+
+.circle-profile img {
+    width: 100%;
+    padding: 16px;
+    margin: 4px 0;
+}
+
+.holder {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+}
+
+.content-banner.stake-one {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.content-banner.stake-two {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.content-banner.stake-three {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.asset-content.piece-two,
+.asset-content.piece-three,
+.asset-content.piece-four {
+    border-left: 1px solid var(--black-006);
+}
+
+/* ------------- Hight Light Invest */
+
+.core-business.cover {
+    background-image: url(../../images/resource/core-business.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 45%;
+    height: 200px;
+
+}
+
+/* ------------- Lastest News */
+
+.news-ticker.slot {
+    padding: 16px 32px;
+    border-left: solid var(--primary-color) 2px;
+    margin: 16px 0;
+    transition: var(--trns-03s);
+}
+
+.news-ticker.slot:hover {
+    cursor: pointer;
+    background-color: var(--background-blue-soft);
+    border-left: solid var(--secondary-color) 2px;
+}
+
+/* ------------- Info for Investor */
+
+.info-for-invest.block {
+    border-radius: var(--corner-s);
+    height: 100%;
+}
+
+.col-tool-pdd-ctrl {
+    padding: 0 12px 12px 0;
+}
+
+.col-tool-pdd-ctrl:nth-child(4),
+.col-tool-pdd-ctrl:nth-child(5),
+.col-tool-pdd-ctrl:nth-child(6) {
+    padding: 0 12px 0 0;
+}
+
+
+.col-tool-pdd-ctrl:first-child,
+.col-tool-pdd-ctrl:nth-child(4) {
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+.col-tool-pdd-ctrl:nth-child(3),
+.col-tool-pdd-ctrl:nth-child(6) {
+    padding-right: 12px;
+}
+
+
+#tool-one:hover {
+    background-image: url(../../images/resource/tool-1.webp);
+    background-position: 20% center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: var(--trns-05s);
+}
+
+#tool-two:hover {
+    background-image: url(../../images/resource/tool-2.webp);
+    background-position: 20% center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: var(--trns-05s);
+}
+
+#tool-three:hover {
+    background-image: url(../../images/resource/tool-3.webp);
+    background-position: 20% center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: var(--trns-05s);
+}
+
+#tool-four:hover {
+    background-image: url(../../images/resource/tool-4.webp);
+    background-position: 20% center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: var(--trns-05s);
+}
+
+#tool-five:hover {
+    background-image: url(../../images/resource/tool-5.webp);
+    background-position: 20% center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: var(--trns-05s);
+}
+
+#tool-six:hover {
+    background-image: url(../../images/resource/tool-6.webp);
+    background-position: 20% center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: var(--trns-05s);
+}
+
+#tool-one:hover .info-for-invest.block,
+#tool-two:hover .info-for-invest.block,
+#tool-three:hover .info-for-invest.block,
+#tool-four:hover .info-for-invest.block,
+#tool-five:hover .info-for-invest.block,
+#tool-six:hover .info-for-invest.block {
+    background: var(--gray-blue-gradient-deg318);
+    height: 100%;
+}
+
+#tool-one:hover a.button-stroke,
+#tool-two:hover a.button-stroke,
+#tool-three:hover a.button-stroke,
+#tool-four:hover a.button-stroke,
+#tool-five:hover a.button-stroke,
+#tool-six:hover a.button-stroke {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+#tool-one:hover .material-symbols-rounded.icon-color,
+#tool-two:hover .material-symbols-rounded.icon-color,
+#tool-three:hover .material-symbols-rounded.icon-color,
+#tool-four:hover .material-symbols-rounded.icon-color,
+#tool-five:hover .material-symbols-rounded.icon-color,
+#tool-six:hover .material-symbols-rounded.icon-color {
+    color: var(--white-color);
+}
+
+#tool-one:hover p,
+#tool-two:hover p,
+#tool-three:hover p,
+#tool-four:hover p,
+#tool-five:hover p,
+#tool-six:hover p {
+    color: var(--white-color) !important;
+}
+
+#tool-one:hover p.small-text,
+#tool-two:hover p.small-text,
+#tool-three:hover p.small-text,
+#tool-four:hover p.small-text,
+#tool-five:hover p.small-text,
+#tool-six:hover p.small-text  {
+    color: var(--black-004) !important;
+}
+
+.info-for-invest.description {
+    height: 75%;
+    padding: 12px;
+}
+
+/* ------------- Social Environment */
+
+.holder.card-shortcut {
+    justify-content: space-between;
+}
+
+.stand-alone {
+    width: 6.5vw;
+}
+
+.frame.card-shortcut {
+    margin: 16px auto;
+}
+
+.card-shortcut.background {
+    background: var(--light-gray-gradient);
+    transition: var(--trns-03s);
+}
+
+.card-shortcut.background:hover {
+    background: var(--blue-gradient);
+}
+
+.card-shortcut.background:hover p{
+    color: var(--white-color);
+}
+
+.card-shortcut.background:hover p.small-text{
+    color: var(--black-004);
+}
+
+.card-shortcut.background:hover a.button-stroke {
+    background: var(--white-color);
+    transition: var(--trns-03s);
+    border: none;
+    box-shadow: var(--shadow-s);
+}
+
+.card-shortcut.background:hover .count-tag-status.block{
+    background: var(--tertiary-color);
+    box-shadow: var(--shadow-s);
+    border: 1px solid var(--tertiary-color);
+}
+
+.card-shortcut.background:hover .count-tag-status.block p{
+    color: var(--black-001);
+}
+
+.card-shortcut.background:hover .count-tag-status.block span{
+    color: var(--black-001);
+}
+
+.button-stroke.inner-dark:hover {
+    color: var(--secondary-color);
+}

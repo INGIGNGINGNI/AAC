@@ -1,0 +1,986 @@
+/*
+Name: 			style
+Version: 		1.0.0
+*/
+
+/*===================================================================
+[Table of contents]
+
+1. Font Style
+2. Box Shadow
+3. Corner Radius
+4. Font Weight
+ุ5. Margin & Padding
+6. Stroke Wieght
+7. Height
+8. Transition
+9. Button
+10. Card
+11. Hight-Light Tag
+12. Hight-Light File
+13. Space TOP/Bottom & Gap
+14. Color Class
+15. Text Align Control
+16. Widget Height Control
+ุ17. New Tag Status
+ุ18. Material Symbols Setting
+ุ19. Count Tag Status
+ุ20. Section Divide
+21. Hug Topic
+ุ22. Label File
+23. Cover Background
+24. Gradient Block
+
+//////////////////////////////////////////////////////////////////////
+
+3.1 Corner Class
+
+====================================================================*/
+
+img {
+    max-width: 1360px;
+    width: 100%;
+}
+
+:root {
+
+    /*------------------------------------------------------------------
+1. Font Style
+-------------------------------------------------------------------*/
+    --body-font: 'Prompt', sans-serif;
+    --icon-font: "Font Awesome 6 Free";
+    --icon-font-2: "Material Symbols Rounded";
+
+    /* -----Desktop Headline */
+    --first-h: 38px;
+    --second-h: 20px;
+    --body-text: 16px;
+    --small-text: 14px;
+    --hint-text: 12px;
+
+    /*------------------------------------------------------------------
+ุ2. Box Shadow
+-------------------------------------------------------------------*/
+    --shadow-s: 0px 0px 9px 0px rgba(145, 151, 203, 0.15);
+    --shadow-s-dark: 0px 0px 9px 0px rgba(145, 151, 203, 0.4);
+
+    /* -----hover action */
+    --shadow-s-hover: 0px 0px 9px 0px rgba(145, 151, 203, 0.10);
+
+    /*------------------------------------------------------------------
+ุ3. Corner Radius
+-------------------------------------------------------------------*/
+    --corner-xs: 8px;
+    --corner-s: 18px;
+    --corner-l: 48px;
+    --corner-xl: 100px;
+    --corner-circle: 50%;
+
+    /*------------------------------------------------------------------
+ุ4. Font Weight
+-------------------------------------------------------------------*/
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+
+    /*------------------------------------------------------------------
+ุ5. Margin & Padding
+-------------------------------------------------------------------*/
+    /* -----for Button */
+    --btn-pd-1: 12px 16px;
+    --btn-pd-2: 12px 12px;
+
+    --btn-mg-10: 12px;
+
+    /* -----for Card Parallel */
+    --crd-pd-s: 12px;
+    --crd-pd-m: 16px;
+    --crd-pd-l: 24px;
+    --crd-pd-xl: 32px;
+
+    /* -----for Card Expand X */
+    --crd-pd-ex: 12px 24px;
+
+    /* -----for Card Expand Bottom */
+    --crd-pd-eb: 12px 12px 24px 12px;
+
+    /* -----for Card Expand Top */
+    --crd-pd-et: 24px 12px 12px 12px;
+
+    /* -----for Card Small Top */
+    --crd-pd-st: 24px 24px 24px 24px;
+
+    /* -----for Hight-Light Tag Expand X */
+    --htag-pd-ex: 4px 12px;
+
+    /*------------------------------------------------------------------
+ุ6. Stroke Wieght
+-------------------------------------------------------------------*/
+    --strk-1: 1px;
+    --strk-2: 2px;
+
+    /*------------------------------------------------------------------
+ุ7. Height
+-------------------------------------------------------------------*/
+    --high-auto: auto;
+    --high-xs: 25px;
+    --high-s: 45px;
+    --high-m: 50px;
+    --high-l: 65px;
+
+    /*------------------------------------------------------------------
+ุ8. Transition
+-------------------------------------------------------------------*/
+    --trns-03s: 0.3s;
+    --trns-05s: 0.5s;
+}
+
+/*------------------------------------------------------------------
+ุ9. Button
+-------------------------------------------------------------------*/
+
+/* ----- Btn Normal */
+a {
+    text-decoration: none !important;
+}
+
+a.primary-button {
+    height: var(--high-s);
+    font-size: var(--body-text);
+    font-weight: var(--fw-400);
+    border-radius: var(--corner-xl);
+    padding: var(--btn-pd-1);
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+a.secondary-button {
+    height: var(--high-s);
+    font-size: var(--body-text);
+    font-weight: var(--fw-400);
+    border-radius: var(--corner-xl);
+    padding: var(--btn-pd-1);
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+/* ----- Btn With Icon */
+a.primary-button.with-icon {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: fit-content;
+    gap: 4px;
+    height: var(--high-s);
+    font-size: var(--body-text);
+    font-weight: var(--fw-400);
+    border-radius: var(--corner-xl);
+    padding: var(--btn-pd-1);
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    transition: var(--trns-03s);
+}
+
+a.primary-button.with-icon:hover {
+    background-color: var(--secondary-color);
+    gap: var(--crd-pd-s);
+}
+
+/* ----- Btn Icon */
+a.button-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--corner-circle);
+    padding: var(--crd-pd-s);
+    transition: var(--trns-03s);
+    background-color: var(--white-color);
+    color: var(--secondary-color);
+    box-shadow: var(--shadow-s);
+}
+
+a.button-icon:hover {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+/* ----- Btn Stroke */
+a.button-stroke {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid var(--strk-1) var(--secondary-color);
+    border-radius: var(--corner-circle);
+    padding: var(--crd-pd-s);
+    background-color: transparent;
+    color: var(--secondary-color);
+    transition: var(--trns-03s);
+}
+
+a.button-stroke span {
+    vertical-align: middle;
+    font-size: var(--second-h);
+}
+
+a.button-stroke:hover {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+/* ----- Btn Link */
+a.button-link-primary {
+    font-size: var(--body-text);
+    color: var(--primary-color);
+    transition: var(--trns-03s);
+    gap: 4px;
+}
+
+a.button-link-primary:hover {
+    color: var(--secondary-color);
+}
+
+a.button-link-secondary {
+    font-size: var(--body-text);
+    color: var(--secondary-color);
+    transition: var(--trns-03s);
+}
+
+a.button-link-secondary:hover {
+    color: var(--primary-color);
+}
+
+a.button-link-secondary.disable {
+    font-size: var(--body-text);
+    color: var(--black-001);
+    transition: var(--trns-03s);
+}
+
+a.button-link-secondary.disable:hover {
+    color: var(--secondary-color);
+}
+
+/* ----- Btn Link Icon*/
+a.button-link-icon {
+    color: var(--secondary-color);
+}
+
+a.button-link-icon span {
+    padding: var(--crd-pd-s) 0;
+    font-size: 24px !important;
+}
+
+/*------------------------------------------------------------------
+ุ10. Card
+-------------------------------------------------------------------*/
+
+/* ----- Section Card */
+.section-card {
+    background: var(--background-section);
+    border-radius: var(--corner-s);
+    padding: var(--crd-pd-m);
+}
+
+/* ----- Widget Card */
+.widget-card-parallel {
+    background: var(--white-color);
+    border-radius: var(--corner-s);
+    padding: var(--crd-pd-s);
+    box-shadow: var(--shadow-s);
+    height: 100%;
+}
+
+.widget-card-ex {
+    background: var(--white-color);
+    border-radius: var(--corner-s);
+    padding: var(--crd-pd-ex);
+    box-shadow: var(--shadow-s);
+}
+
+.widget-card-eb {
+    background: var(--white-color);
+    border-radius: var(--corner-s);
+    padding: var(--crd-pd-eb);
+    box-shadow: var(--shadow-s);
+}
+
+.widget-card-et {
+    background: var(--white-color);
+    border-radius: var(--corner-s);
+    padding: var(--crd-pd-et);
+    box-shadow: var(--shadow-s);
+}
+
+.widget-card-st {
+    background: var(--white-color);
+    border-radius: var(--corner-s);
+    padding: var(--crd-pd-st);
+    box-shadow: var(--shadow-s);
+}
+
+/* ----- Inner Card */
+.inner-card-m {
+    background: var(--background-inner);
+    border-radius: var(--corner-s);
+    padding: var(--crd-pd-s);
+    height: 100%;
+}
+
+.inner-card.footer {
+    display: flex;
+    justify-content: end;
+    /* padding: 16px 0 12px 0; */
+}
+
+.inner-card-l {
+    background: var(--background-inner);
+    border-radius: var(--corner-s);
+    padding: var(--crd-pd-l);
+    height: 100%;
+}
+
+/*------------------------------------------------------------------
+ุ11. Hight-Light Tag
+-------------------------------------------------------------------*/
+
+.yellow-tag {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 12px;
+    background: var(--tertiary-color);
+    border-radius: var(--corner-xs);
+    padding: var(--htag-pd-ex);
+    height: var(--high-xs);
+    color: var(--black-000);
+}
+
+.yellow-tag img {
+    width: 100% !important;
+}
+
+.yellow-tag.left-side {
+    right: auto;
+    left: 12px;
+}
+
+/*------------------------------------------------------------------
+ุ12. Hightlight File
+-------------------------------------------------------------------*/
+.snip {
+    border-radius: var(--corner-s);
+    color: #ffffff;
+    float: left;
+    font-size: 16px;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    width: 100%;
+}
+
+.snip * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.snip img {
+    border-radius: var(--corner-s);
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+    object-position: 50% 0%;
+    vertical-align: top;
+    position: relative;
+}
+
+.snip.h-max img {
+    height: 100%;
+}
+
+.snip.h-fix440 img {
+    height: 430px;
+    object-position: 95% 0%;
+}
+
+.snip figcaption {
+    width: 100%;
+    padding: var(--crd-pd-s);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.snip figcaption:before {
+    border-radius: var(--corner-s);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    background: var(--cover-img-gradient1);
+    opacity: 1;
+    z-index: -1;
+}
+
+.snip.black-alpha-cover figcaption:before {
+    background: var(--cover-img-solid2);
+}
+
+
+.snip.blue-alpha-cover figcaption:before {
+    background: var(--background-blue-soft-alpha);
+}
+
+.snip.no-cover figcaption:before {
+    background: transparent;
+}
+
+.snip:hover img,
+.snip.hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+
+/*------------------------------------------------------------------
+ุ13. Space Top/Bottom & Gap
+-------------------------------------------------------------------*/
+
+/* ----- Bottom */
+.spb-24 {
+    padding-bottom: var(--crd-pd-l);
+}
+
+.spb-30 {
+    padding-bottom: 30px;
+}
+
+.spb-50 {
+    padding-bottom: 50px;
+}
+
+/* ----- Top */
+.spt-minus24 {
+    margin-top: -24px;
+}
+
+.spt-minus32 {
+    margin-top: -32px;
+}
+
+.spt-minus40 {
+    margin-top: -40px;
+}
+
+.spt-24 {
+    padding-top: var(--crd-pd-l);
+}
+
+.spt-30 {
+    padding-top: 30px;
+}
+
+.spt-110 {
+    padding-top: 110px;
+}
+
+/* ----- Gap Desktop */
+.gap-dsk-16 {
+    gap: var(--crd-pd-m);
+}
+
+/*------------------------------------------------------------------
+ุ14. Color Class
+-------------------------------------------------------------------*/
+
+/* Background Color */
+
+.tertiary-background {
+    background-color: var(--tertiary-color);
+}
+
+/* Text Color */
+
+.black-a50-color {
+    color: var(--black-a50);
+}
+
+.black-color {
+    color: var(--black-000);
+}
+
+.danger-color {
+    color: var(--danger-color) !important;
+}
+
+.hint-color {
+    color: var(--black-003);
+}
+
+.icon-color {
+    color: var(--icon-color);
+}
+
+.positive-color {
+    color: var(--positive-color);
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.seconndary-color {
+    color: var(--secondary-color);
+}
+
+.tertiary-color {
+    color: var(--tertiary-color);
+}
+
+.text-color {
+    color: var(--black-001);
+}
+
+/*------------------------------------------------------------------
+ุ15. Text Align Control
+-------------------------------------------------------------------*/
+
+.xs-text-center {
+    text-align: right;
+}
+
+.md-text-center {
+    text-align: left;
+}
+
+/*------------------------------------------------------------------
+ุ16. Widget Height Control
+-------------------------------------------------------------------*/
+
+/* for the Couples of Widget on D-Flex  */
+/* .widget.maxh-ctrl {
+    overflow-y: auto;
+} */
+
+.widget.maxh-ctrl .maxh-100 {
+    height: 100%;
+}
+
+.widget-card-parallel.flex-height-ctrl,
+.widget-card-parallel.flex-height-ctrl .md-setscreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--crd-pd-s);
+}
+
+/*------------------------------------------------------------------
+ุ17. New Tag Status
+-------------------------------------------------------------------*/
+.new-tag-satus.block {
+    display: flex;
+    gap: var(--crd-pd-s);
+    margin-bottom: var(--crd-pd-s);
+}
+
+.new-tag-satus {
+    align-items: center;
+}
+
+.new-tag-satus img {
+    max-width: 18px;
+    width: 100%;
+}
+
+.new-tag-satus span {
+    padding: 2px var(--crd-pd-s);
+    align-items: center;
+    gap: 4px;
+}
+
+.new-tag-satus p {
+    margin-bottom: 0px;
+}
+
+/*------------------------------------------------------------------
+ุ18. Material Symbols Setting
+-------------------------------------------------------------------*/
+span.material-symbols-rounded {
+    font-family: 'Material Symbols Rounded' !important;
+    font-size: 24px !important;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'liga';
+}
+
+span.material-symbols-rounded.icon-color {
+    font-size: 24px !important;
+}
+
+/*------------------------------------------------------------------
+ุ19. Count Tag Status
+-------------------------------------------------------------------*/
+.count-tag-status.block {
+    display: inline-flex;
+    padding: 4px var(--crd-pd-s);
+    background: var(--background-blue-soft-alpha);
+    border: 1px solid var(--background-blue-soft-dark);
+    border-radius: var(--corner-xs);
+    align-items: center;
+}
+
+/*------------------------------------------------------------------
+ุ20. Section Divide
+-------------------------------------------------------------------*/
+.section-divide {
+    background: var(--background-section);
+    padding: var(--crd-pd-l);
+    border-radius: var(--corner-s);
+}
+
+/*------------------------------------------------------------------
+ุ21. Hug Topic
+-------------------------------------------------------------------*/
+.hug {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hug.topic-nbuttn {
+    padding: 8px var(--crd-pd-s) 4px var(--crd-pd-s);
+}
+
+.hug.suptoppic-ncontent {
+    padding: 4px 0;
+}
+
+.hug.file-ndownload {
+    width: 100%;
+    position: absolute;
+    bottom: 12px;
+    right: 20px;
+    left: 12px;
+    padding-right: var(--crd-pd-l);
+}
+
+.hug.link-ndownload {
+    max-height: 270px;
+    overflow-y: auto;
+    width: 100%;
+    padding: 0 var(--crd-pd-s) 0 0 !important;
+    align-items: baseline;
+}
+
+.hug.link-ndownload ul {
+    width: 100%;
+    list-style: none;
+    padding: 0 0 0 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.hug.link-ndownload ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--black-005);
+    padding: var(--crd-pd-m) 0 0 0;
+}
+
+.hug.link-ndownload ul li:first-child {
+    padding-top: 0;
+}
+
+.hug.link-ndownload ul li:last-child {
+    border-bottom: none;
+}
+
+.hug.link-ndownload ul li p {
+    color: var(--primary-color);
+    margin-bottom: var(--crd-pd-s);
+}
+
+.hug.link-ndownload.none-overflow {
+    display: block;
+    overflow-y: visible;
+    height: 100%;
+    padding: 0 0 0 0 !important;
+}
+
+.hug.link-ndownload.none-overflow ul {
+    padding: 0 0 0 var(--crd-pd-s) !important;
+}
+
+.hug.link-ndownload.wrap {
+    max-height: 100%;
+    overflow-y: auto;
+}
+/* ตรงนี้พอเป็นหน้าจอ 1399 ให้ปรับ Max Height */
+
+.hug.link-ndownload.wrap ul {
+   padding: 0 !important;
+}
+
+
+.hug.link-ndownload.wrap li {
+    background: var(--background-inner);
+    height: 100%;
+    border-radius: var(--corner-s);
+    padding: var(--crd-pd-m) !important;
+    margin: 0 0 var(--crd-pd-s) 0;
+    border-bottom: none;
+}
+
+.hug.link-ndownload.wrap li:last-child {
+    margin: 0;
+}
+
+.hug.link-ndownload.wrap ul li p {
+    margin-bottom: 0;
+}
+
+.hug.double-button {
+    position: absolute;
+    right: 0;
+}
+
+
+
+
+/*------------------------------------------------------------------
+ุ22. Label File
+-------------------------------------------------------------------*/
+.label-file {
+    width: 100%;
+    color: var(--primary-color);
+}
+
+.label-file ul {}
+
+.label-file p {
+    color: var(--primary-color);
+}
+
+.label-file.block {
+    width: 100%;
+    background-color: var(--white-color);
+    border-radius: var(--corner-s);
+    color: var(--primary-color);
+    padding: 18px;
+}
+
+.label-file.block p {
+    color: var(--primary-color);
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.label-file.block small {
+    line-height: 140%;
+}
+
+/*------------------------------------------------------------------
+ุ23. Cover Background
+-------------------------------------------------------------------*/
+
+.cover-light-blue {
+    background: var(--light-blue-gradient);
+}
+
+/*------------------------------------------------------------------
+ุ24. Gradient Block
+-------------------------------------------------------------------*/
+.gradient-blue.block {
+    background: var(--gray-blue-gradient-degn);
+    border-radius: var(--corner-s);
+    padding: var(--crd-pd-l) var(--crd-pd-s) var(--crd-pd-s) var(--crd-pd-s);
+}
+
+.gradient-blue.block h2 {
+    text-align: left !important;
+}
+
+.gradient-blue.block.with-background {
+    background-image: url(../../images/resource/pin-map.webp);
+    background-position: 80% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* #################################################################
+1.1 Font Class & Responsive
+##################################################################*/
+
+h1 {
+    font-size: var(--first-h);
+    color: var(--white-color);
+    /* box-shadow: var(--shadow-s-dark); */
+    font-weight: var(--fw-600);
+    padding: 18px 0;
+}
+
+h2 {
+    font-size: var(--second-h);
+    font-weight: var(--fw-400);
+    margin-bottom: 0;
+}
+
+p {
+    font-size: var(--body-text);
+    color: var(--black-002);
+    margin-bottom: 4px;
+}
+
+.small-text {
+    font-size: var(--small-text);
+}
+
+.hint {
+    font-size: var(--hint-text);
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    :root {
+        --body-text: 14px;
+    }
+}
+
+@media (max-width: 425px) {
+    :root {
+        --body-text: 14px;
+    }
+}
+
+
+/* #################################################################
+3.1 Corner Class
+##################################################################*/
+
+.corner-xs {
+    border-radius: var(--corner-xs);
+}
+
+.corner-s {
+    border-radius: var(--corner-s);
+}
+
+.corner-l {
+    border-radius: var(--corner-l);
+}
+
+.corner-xl {
+    border-radius: var(--corner-xl);
+}
+
+
+/* #################################################################
+4.1 Font Weight Class
+##################################################################*/
+.fw-400 {
+    font-weight: var(--fw-400);
+}
+
+/* #################################################################
+4.2 Font Weight Class
+##################################################################*/
+.fs-16 {
+    font-size: var(--body-text);
+}
+
+.fs-14 {
+    font-size: var(--small-text);
+}
+
+/* #################################################################
+5.1 Margin & Padding Class
+##################################################################*/
+.mgt-12 {
+    margin-top: var(--crd-pd-s);
+}
+
+.mgt-16 {
+    margin-top: var(--crd-pd-m);
+}
+
+.mgt-24 {
+    margin-top: var(--crd-pd-l);
+}
+
+.mgt-30 {
+    margin-top: 30px;
+}
+
+.mgb-4xw {
+    margin-bottom: 4px;
+}
+
+.mgb-12 {
+    margin-bottom: var(--crd-pd-s);
+}
+
+.mgb-24 {
+    margin-bottom: var(--crd-pd-l);
+}
+
+.mgb-md-24 {
+    margin-bottom: 0px;
+}
+
+.padd-x16 {
+    padding: 0px var(--crd-pd-m);
+}
+
+.xl-pr-0,
+.lg-pr-0 {
+    padding-left: 0px;
+}
+
+.w-40 {
+    width: 40% !important;
+}
+
+.w-custom {
+    width: 40%;
+}
+
+.h-97 {
+    height: 97% !important;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-inline-end {
+    float: inline-end;
+}
+
+
+
+.placeholder {
+    background: #b0b0b0;
+    border-radius: 999px;
+}

@@ -1,0 +1,93 @@
+/*
+Name: 			toggle-tabs
+Version: 		1.0.0
+*/
+
+/*===================================================================
+[Table of contents]
+
+---------------------------------------------------------------------
+1. Toggle Tabs
+---------------------------------------------------------------------
+
+====================================================================*/
+
+/* ------------------------------------------------------------------
+1. Toggle Tabs
+--------------------------------------------------------------------- */
+
+.tabs {
+    width: fit-content;
+    background-color: var(--black-007);
+    padding: 8px;
+    border-radius: var(--corner-xl);
+}
+
+.warpper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 8px 16px;
+    margin: 0px 2px;
+    display: inline-block;
+    color: #000;
+    border-radius: var(--corner-xl);
+}
+
+.panels {
+    margin-top: 15px;
+    background: #fffffff6;
+    height: 272px;
+    width: 100%;
+    border-radius: 3px;
+    overflow-y: auto;
+}
+
+.panel {
+    display: none;
+    animation: fadein .8s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.panel-title {
+    font-size: 1.5em;
+    font-weight: bold
+}
+
+.radio {
+    display: none;
+}
+
+#one:checked~.panels #one-panel,
+#two:checked~.panels #two-panel {
+    display: block;
+}
+
+#one-tab,
+#two-tab {
+    color: #000;
+    border-radius: var(--corner-xl);
+    width: fit-content;
+}
+
+#one:checked~.tabs #one-tab,
+#two:checked~.tabs #two-tab {
+    background: var(--white-color);
+    box-shadow: var(--shadow-s-dark);
+    color: #000;
+    border-radius: var(--corner-xl);
+    width: fit-content;
+}

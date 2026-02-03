@@ -1855,6 +1855,7 @@
     padding-top: var(--spacing-48px);
     padding-bottom: var(--spacing-48px);
     margin: var(--spacing-12px);
+    bottom: var(--spacing-12px);
 
     .footer-gap {
         row-gap: var(--spacing-56px);
@@ -1889,6 +1890,10 @@
 
                     span {
                         color: var(--tj-color-icon-primary);
+                    }
+
+                    span.fill {
+                        font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24 !important;
                     }
 
                     p {
@@ -2083,7 +2088,7 @@
                     text-transform: uppercase;
                     margin-bottom: var(--spacing-none);
 
-                    p {
+                    span {
                         margin-bottom: var(--spacing-none);
                     }
                 }
@@ -2096,6 +2101,7 @@
     .tj-footer-section {
         border-radius: var(--radius-none);
         margin: var(--spacing-none);
+        bottom: 0;
     }
 }
 

@@ -355,7 +355,7 @@ input[type=search]::-webkit-search-results-decoration {
 
 * {
     scrollbar-width: thin;
-    scrollbar-color: var(--tj-color-theme-primary) var(--tj-color-common-white);
+    scrollbar-color: var(--tj-color-common-black) var(--tj-color-common-white);
 }
 
 ::-webkit-scrollbar {
@@ -364,7 +364,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--tj-color-theme-primary);
+    background: var(--tj-color-common-black);
     -webkit-border-radius: 1ex;
     -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.75);
 }

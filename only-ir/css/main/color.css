@@ -1,0 +1,93 @@
+/*
+Name: 			color
+Version: 		1.0.0
+*/
+
+/*===================================================================
+[Table of contents]
+
+1. Colors Corporate Theme
+2. Colors Grayscale
+3. Colors Informing
+4. Colors Gradient
+5. Colors Fix Elements
+====================================================================*/
+
+
+:root {
+    /*------------------------------------------------------------------
+1. Colors Corporate Theme
+-------------------------------------------------------------------*/
+    --primary-color: #124EA0;
+    --secondary-color: #3270FF;
+    --tertiary-color: #FFF200;
+
+    /* -----Dark Tone */
+    --primary-color-dark: #081d44;
+    --secondary-color-dark: #1955e0;
+    --tertiary-color-dark: #e3d804;
+
+    /*------------------------------------------------------------------
+2. Colors Grayscale
+-------------------------------------------------------------------*/
+    --black-000: #262626;
+    --black-001: #363A39;
+    --black-002: #595959;
+    --black-003: #A3A4A6;
+    --black-004: #E6E6E6;
+    --black-005: #EDEDED;
+    --black-006: #EEEEEE;
+    --black-007: #f4f4f4;
+    --white-color: #ffffff;
+
+    --black-a50: rgba(0, 0, 0, 0.5);
+    --black-a90: rgba(0, 0, 0, 0.9);
+
+    /*------------------------------------------------------------------
+3. Colors Informing
+-------------------------------------------------------------------*/
+    --danger-color: #E60000;
+    --positive-color: #09DE72;
+    --warning-color: #F5CB10;
+
+    /* -----Dark Tone */
+    --danger-color-dark: #b7102c;
+    --positive-color-dark: #009c75;
+    --warning-color-dark: #e4bc0a;
+
+    /*------------------------------------------------------------------
+4. Colors Gradient
+-------------------------------------------------------------------*/
+    --yellow-gradient: linear-gradient(180deg, #FFF200 0%, rgba(255, 247, 100, 0.9) 100%);
+    --blue-gradient: linear-gradient(0deg, #0D3799 0%, rgba(0, 77, 255, 0.55) 175%);
+    --blue-gradient-deg90: linear-gradient(-90deg, #0D3799 0%, rgba(0, 77, 255, 0.30) 95%);
+    --light-blue-gradient: linear-gradient(180deg, #043097 0%, rgba(45, 61, 92, 0) 88%);
+    --gray-blue-gradient-deg318: linear-gradient(318deg, rgba(0, 18, 61, 0.00) 7%, #3270FF 83%);
+    --gray-blue-gradient-degn: linear-gradient(406deg, rgba(0, 18, 61, 0.00) 50%, #3270FF 523%);
+    --light-gray-gradient: linear-gradient(180deg, #FFF -38.54%, #ECECEC 100%);
+
+    /* -----Image Cover */
+    --cover-img-gradient1: linear-gradient(180deg, rgba(0, 19, 54, 0.80) 9.01%, rgba(50, 112, 255, 0.60) 100%);
+    --cover-img-solid: #4E75A0;
+    --cover-img-solid2: rgba(0, 0, 0, 0.3);
+
+    /*------------------------------------------------------------------
+5. Colors Fix Elements
+-------------------------------------------------------------------*/
+    --icon-color: #7A808C;
+    --background-blue-soft: #f7f9ff;
+    --background-blue-soft-alpha: rgba(142, 163, 221, 0.2);
+    --background-blue-soft-dark: #a9bfff;
+    --background-widget: #FAFAFA;
+    --background-section: #F3F3F3;
+    --background-inner: #f7f7f7;
+    --base-body-color: #F8F8F8;
+
+    --blue-color: #00138E;
+    --capri-blue-color: #39A9E9;
+    
+    /* -----Dark Tone */
+    --blue-color-dark: #000f71;
+    --capri-blue-color-dark: #2f9bdb;
+}
+

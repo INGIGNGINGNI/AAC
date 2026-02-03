@@ -80,10 +80,19 @@
 	function initMegaMenuSubmenuSwitching() {
 		console.log("Mega Menu Loader: Initializing submenu switching");
 		
-		// Handle click on main menu links
-		$(document).on("click", ".mega-menu-main-link", function(e) {
+		// Remove any existing handlers first to prevent duplicates
+		$(document).off("click.megamenu", ".mega-menu-main-link");
+		$(".mega-menu-main-link").off("click.megamenu");
+		
+		// Use DIRECT binding instead of delegation to avoid event propagation issues
+		$(".mega-menu-main-link").on("click.megamenu", function(e) {
+			console.log("=== CLICK HANDLER FIRED (DIRECT) ===");
+			
 			var $link = $(this);
 			var href = $link.attr("href");
+			
+			console.log("Link clicked:", $link.text().trim());
+			console.log("Href:", href);
 			
 			// Check if this link should navigate to a page (has real href, not #)
 			if (href && href !== "#" && href !== "javascript:void(0)") {
@@ -99,8 +108,9 @@
 			// Otherwise, handle submenu switching
 			e.preventDefault();
 			e.stopPropagation();
+			e.stopImmediatePropagation();
 			
-			console.log("Mega Menu Loader: Main menu link clicked");
+			console.log("Mega Menu Loader: Handling submenu switch");
 			
 			var menuId = $link.data("menu-id");
 			var $wrapper = $link.closest(".mega-menu-wrapper");
@@ -124,12 +134,26 @@
 			// Only show submenu if it exists
 			if ($targetSubmenu.length > 0) {
 				$targetSubmenu.addClass("active");
+				console.log("Mega Menu Loader: Submenu activated");
 			} else {
 				// If no submenu found, close the mega menu
 				console.log("Mega Menu Loader: No submenu found, closing mega menu");
 				$link.closest("li.has-dropdown").removeClass("dropdown-active");
 			}
+			
+			return false;
 		});
+		
+		console.log("Mega Menu Loader: Direct click handler bound to", $(".mega-menu-main-link").length, "links");
+		
+		// Test if handler is working
+		setTimeout(function() {
+			var $testLink = $(".mega-menu-main-link").first();
+			if ($testLink.length > 0) {
+				console.log("Mega Menu Loader: Test link found:", $testLink.text().trim());
+				console.log("Mega Menu Loader: Click handler should be ready");
+			}
+		}, 500);
 	}
 
 })(jQuery);
