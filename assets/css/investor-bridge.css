@@ -39,8 +39,15 @@ html {
 }
 
 /* Apply to most elements but with lower specificity than icons */
-body *:not(.material-symbols-rounded):not([class*="material-symbols"]) {
+body *:not(.material-symbols-rounded):not([class*="material-symbols"]):not(.tj-preloader-text):not(.tj-preloader *) {
     font-family: 'Prompt', sans-serif !important;
+}
+
+/* Ensure preloader and its text use the special font like other pages */
+.tj-preloader,
+.tj-preloader *,
+.tj-preloader .tj-preloader-text {
+    font-family: var(--tj-ff-en-special) !important;
 }
 
 p {
@@ -213,11 +220,11 @@ a.primary-button.with-icon {
     -moz-osx-font-smoothing: grayscale !important;
     text-rendering: optimizeLegibility !important;
     font-feature-settings: 'liga' !important;
-    font-variation-settings:
+    /* font-variation-settings:
         'FILL' 0,
         'wght' 300,
         'GRAD' 0,
-        'opsz' 24 !important;
+        'opsz' 24 !important; */
 }
 
 /* Specifically fix button icons */
@@ -294,13 +301,13 @@ a.button-icon span.material-symbols-rounded {
 }
 
 /* Ensure IR charts render properly */
-#echart_2024,
+/* #echart_2024,
 #echart_2023,
 #echart_2022,
 #echart_line_2022 {
     width: 100%;
     min-height: 260px;
-}
+} */
 
 /* Fix IR gradient backgrounds */
 .gradient-blue.block {
@@ -601,7 +608,7 @@ h6 {
     }
 
     h1 {
-        font-size: var(--tj-fs-title);
+        font-size: var(--tj-fs-hero-title);
         font-weight: var(--tj-fw-medium);
         padding: var(--spacing-none);
         margin: var(--spacing-none);
@@ -721,6 +728,10 @@ label.btn-tabs {
                 order: 1;
             }
 
+            @media (max-width: 575px) {
+                padding: var(--spacing-none);
+            }
+
             p {
                 margin: var(--spacing-none);
 
@@ -755,6 +766,10 @@ label.btn-tabs {
 
             @media (max-width: 991px) {
                 order: 3;
+            }
+
+            @media (max-width: 575px) {
+                padding: var(--spacing-none);
             }
 
             .update-text {
@@ -1133,10 +1148,10 @@ label.btn-tabs {
 
         .bar-chart {
             padding-right: calc(var(--spacing-12px) / 2);
-            margin-bottom: var(--spacing-12px);
 
             @media (max-width: 991px) {
                 padding-right: var(--spacing-12px);
+                margin-bottom: var(--spacing-12px);
             }
         }
 
@@ -1374,6 +1389,7 @@ label.btn-tabs {
                 @media (max-width: 991px) {
                     max-height: 216px;
                     height: 100%;
+                    margin-top: var(--spacing-none);
                 }
 
                 ul {
@@ -1413,6 +1429,10 @@ label.btn-tabs {
             }
 
             .snip {
+                @media (max-width: 991px) {
+                    margin-bottom: var(--spacing-12px) !important;
+                }
+
                 &::after {
                     display: none;
                 }

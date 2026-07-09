@@ -13,6 +13,9 @@
     const isEnglish = currentPath.includes('-en.html');
     const lang = isEnglish ? 'en' : 'th';
 
+    // ตรวจสอบว่าเป็นหน้า IR หรือไม่
+    const isIRPage = currentPath.includes('investor');
+
     // ตรวจสอบว่าเป็นหน้า index หรือไม่
     const isIndexPage = currentPath === '/' || 
                         currentPath.endsWith('/index.html') ||
@@ -52,13 +55,26 @@
         try {
             console.log(`Header Loader: Loading menus for index page (${lang})...`);
 
-            // เลือกไฟล์ตามภาษา
-            const menuNavFile = isEnglish ? 
-                'components/menu-navigation-en.html' : 
-                'components/menu-navigation.html';
-            const menuRightFile = isEnglish ? 
-                'components/menu-right-buttons-en.html' : 
-                'components/menu-right-buttons.html';
+            // เลือกไฟล์ตามภาษาและประเภทหน้า
+            let menuNavFile, menuRightFile;
+            
+            if (isIRPage) {
+                // ใช้เมนู IR
+                menuNavFile = isEnglish ? 
+                    'components/menu-navigation-ir-en.html' : 
+                    'components/menu-navigation-ir.html';
+                menuRightFile = isEnglish ? 
+                    'components/menu-right-buttons-ir-en.html' : 
+                    'components/menu-right-buttons-ir.html';
+            } else {
+                // ใช้เมนูปกติ
+                menuNavFile = isEnglish ? 
+                    'components/menu-navigation-en.html' : 
+                    'components/menu-navigation.html';
+                menuRightFile = isEnglish ? 
+                    'components/menu-right-buttons-en.html' : 
+                    'components/menu-right-buttons.html';
+            }
 
             // โหลด menu components
             const [menuNav, menuRight] = await Promise.all([
@@ -89,12 +105,22 @@
     // โหลด header template และเมนู (สำหรับหน้าอื่นๆ)
     async function initializeHeaders() {
         try {
-            console.log(`Header Loader: Starting (${lang})...`);
+            console.log(`Header Loader: Starting (${lang}, ${isIRPage ? 'IR' : 'Main'})...`);
             
-            // เลือกไฟล์ header template ตามภาษา
-            const headerTemplateFile = isEnglish ? 
-                'components/header-template-en.html' : 
-                'components/header-template.html';
+            // เลือกไฟล์ header template ตามภาษาและประเภทหน้า
+            let headerTemplateFile;
+            
+            if (isIRPage) {
+                // ใช้ header IR
+                headerTemplateFile = isEnglish ? 
+                    'components/header-ir-template-en.html' : 
+                    'components/header-ir-template.html';
+            } else {
+                // ใช้ header ปกติ
+                headerTemplateFile = isEnglish ? 
+                    'components/header-template-en.html' : 
+                    'components/header-template.html';
+            }
             
             // โหลด header template ก่อน
             const headerTemplate = await loadComponent(headerTemplateFile);
@@ -117,13 +143,26 @@
             // รอให้ DOM update
             await new Promise(resolve => setTimeout(resolve, 50));
 
-            // เลือกไฟล์เมนูตามภาษา
-            const menuNavFile = isEnglish ? 
-                'components/menu-navigation-en.html' : 
-                'components/menu-navigation.html';
-            const menuRightFile = isEnglish ? 
-                'components/menu-right-buttons-en.html' : 
-                'components/menu-right-buttons.html';
+            // เลือกไฟล์เมนูตามภาษาและประเภทหน้า
+            let menuNavFile, menuRightFile;
+            
+            if (isIRPage) {
+                // ใช้เมนู IR
+                menuNavFile = isEnglish ? 
+                    'components/menu-navigation-ir-en.html' : 
+                    'components/menu-navigation-ir.html';
+                menuRightFile = isEnglish ? 
+                    'components/menu-right-buttons-ir-en.html' : 
+                    'components/menu-right-buttons-ir.html';
+            } else {
+                // ใช้เมนูปกติ
+                menuNavFile = isEnglish ? 
+                    'components/menu-navigation-en.html' : 
+                    'components/menu-navigation.html';
+                menuRightFile = isEnglish ? 
+                    'components/menu-right-buttons-en.html' : 
+                    'components/menu-right-buttons.html';
+            }
 
             // โหลด menu components
             const [menuNav, menuRight] = await Promise.all([

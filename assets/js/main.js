@@ -119,19 +119,19 @@ Progressbar js
 		// ลบ meanmenu เก่าออกก่อน (ถ้ามี)
 		$('.mean-container').remove();
 		$('.mean-bar, .mean-nav').remove();
-		
+
 		// Initialize meanmenu ใหม่
 		$("#mobile-menu").meanmenu({
 			meanMenuContainer: ".mobile_menu",
 			meanScreenWidth: "1199",
 			meanExpand: ['<span class="material-symbols-rounded">keyboard_arrow_down</span>'],
 		});
-		
+
 		console.log('✓ Mobile menu initialized');
 	}
 
 	// รอ event 'headersLoaded' จาก header-loader.js
-	document.addEventListener('headersLoaded', function() {
+	document.addEventListener('headersLoaded', function () {
 		initializeMobileMenu();
 		initializeHamburgerMenu();
 	});
@@ -141,7 +141,7 @@ Progressbar js
 		// ลบ event เก่าออกก่อน (ถ้ามี)
 		$(document).off("click", ".mobile_menu_bar");
 		$(document).off("click", ".hamburger_close_btn");
-		
+
 		// Bind event ใหม่
 		$(document).on("click", ".mobile_menu_bar", function () {
 			$(this).toggleClass("on");
@@ -167,7 +167,7 @@ Progressbar js
 			$(".body-overlay").removeClass("opened");
 			$("body").removeClass("overflow-hidden");
 		});
-		
+
 		console.log('✓ Hamburger menu events initialized');
 	}
 
@@ -1358,8 +1358,7 @@ Progressbar js
 							start: `top-=${startOffset} top`,
 							endTrigger: container,
 							end: () =>
-								`bottom top+=${
-									lastPanel.offsetHeight + startOffset + paddingBottom
+								`bottom top+=${lastPanel.offsetHeight + startOffset + paddingBottom
 								}`,
 							pin: true,
 							pinSpacing: false,
@@ -1463,8 +1462,7 @@ Progressbar js
 										start: `top-=${startOffset} top`,
 										endTrigger: container,
 										end: () =>
-											`bottom top+=${
-												lastPanel.offsetHeight + startOffset + paddingBottom
+											`bottom top+=${lastPanel.offsetHeight + startOffset + paddingBottom
 											}`,
 										pin: true,
 										pinSpacing: false,
@@ -1503,7 +1501,7 @@ Progressbar js
 						scrub: true,
 
 						// start: "top top",
-        				// end: "top+=30% top",
+						// end: "top+=30% top",
 					},
 				});
 			});
@@ -1530,7 +1528,7 @@ Progressbar js
 						scrub: true,
 
 						// start: "top top",
-        				// end: "top+=30% top",
+						// end: "top+=30% top",
 					},
 				});
 			});
@@ -1587,9 +1585,8 @@ Progressbar js
 								scrollTrigger: {
 									trigger: panel,
 									start: `top bottom`,
-									end: `${
-										i === 0 || i === 2 ? "bottom+=200" : "bottom+=300"
-									} bottom`,
+									end: `${i === 0 || i === 2 ? "bottom+=200" : "bottom+=300"
+										} bottom`,
 									pin: false,
 									pinSpacing: false,
 									scrub: true,
@@ -1803,8 +1800,21 @@ Progressbar js
 	}
 
 	// portfolio tabs
-	$(".h6-project .h6-project-item").on("mouseover", function () {
-		$(this).addClass("active").siblings().removeClass("active");
+	// Only enable hover effect on screens larger than 767px
+	if ($(window).width() > 767) {
+		$(".h6-project .h6-project-item").on("mouseover", function () {
+			$(this).addClass("active").siblings().removeClass("active");
+		});
+	}
+
+	// Re-check on window resize
+	$(window).on("resize", function () {
+		$(".h6-project .h6-project-item").off("mouseover");
+		if ($(window).width() > 767) {
+			$(".h6-project .h6-project-item").on("mouseover", function () {
+				$(this).addClass("active").siblings().removeClass("active");
+			});
+		}
 	});
 
 	// Active on  hover
@@ -2016,104 +2026,104 @@ Progressbar js
 			$(".mainmenu > ul > li.has-dropdown > a").on("click", function (e) {
 				e.preventDefault();
 				e.stopPropagation();
-				
+
 				var $parentLi = $(this).parent();
 				var $link = $(this);
 				var isActive = $parentLi.hasClass("dropdown-active");
-				
+
 				// Check if this is the mega menu button (btn-menu)
 				var isMegaMenu = $parentLi.hasClass("btn-menu");
-				
+
 				// ตรวจสอบภาษาจากชื่อไฟล์
 				var isEnglish = window.location.pathname.includes('-en.html');
 				var defaultText = isEnglish ? "More " : "เมนูอื่นๆ ";
-				
+
 				// Close all other dropdowns at the same level
 				$(".mainmenu > ul > li.has-dropdown").not($parentLi).removeClass("dropdown-active");
-				
+
 				// Reset text and icon for all other mega menu buttons
-				$(".mainmenu > ul > li.has-dropdown.btn-menu").not($parentLi).each(function() {
+				$(".mainmenu > ul > li.has-dropdown.btn-menu").not($parentLi).each(function () {
 					var $otherLink = $(this).find("> a");
 					var $otherIcon = $otherLink.find(".material-symbols-rounded");
 					// Reset to original text and icon
-					$otherLink.contents().filter(function() {
+					$otherLink.contents().filter(function () {
 						return this.nodeType === 3; // Text node
 					}).first().replaceWith(defaultText);
 					$otherIcon.text("notes");
 				});
-				
+
 				// Toggle current dropdown
 				$parentLi.toggleClass("dropdown-active");
-				
+
 				// Toggle text and icon for mega menu button
 				if (isMegaMenu) {
 					var closeText = isEnglish ? "Close " : "ปิดเมนู ";
 					var openText = defaultText; // ใช้ตัวแปรที่ประกาศไว้ด้านบน
-					
+
 					var $icon = $link.find(".material-symbols-rounded");
 					if ($parentLi.hasClass("dropdown-active")) {
 						// Change to "Close" or "ปิดเมนู" and close icon
-						$link.contents().filter(function() {
+						$link.contents().filter(function () {
 							return this.nodeType === 3; // Text node
 						}).first().replaceWith(closeText);
 						$icon.text("close");
 					} else {
 						// Change back to "More" or "เมนูอื่นๆ" and notes icon
-						$link.contents().filter(function() {
+						$link.contents().filter(function () {
 							return this.nodeType === 3; // Text node
 						}).first().replaceWith(openText);
 						$icon.text("notes");
 					}
 				}
-				
+
 				// If this dropdown was just opened, close any nested dropdowns
 				if (!isActive) {
 					$parentLi.find("li.has-dropdown").removeClass("dropdown-active");
 				}
 			});
-			
+
 			// Handle nested submenu items with dropdown
 			$(".mainmenu .sub-menu li.has-dropdown > a").on("click", function (e) {
 				e.preventDefault();
 				e.stopPropagation();
-				
+
 				var $parentLi = $(this).parent();
-				
+
 				// Close sibling dropdowns
 				$parentLi.siblings("li.has-dropdown").removeClass("dropdown-active");
-				
+
 				// Toggle current dropdown
 				$parentLi.toggleClass("dropdown-active");
 			});
-			
+
 			// Close dropdowns when clicking outside
 			$(document).on("click", function (e) {
 				if (!$(e.target).closest(".mainmenu").length) {
 					$(".mainmenu li.has-dropdown").removeClass("dropdown-active");
-					
+
 					// ตรวจสอบภาษาจากชื่อไฟล์
 					var isEnglish = window.location.pathname.includes('-en.html');
 					var defaultText = isEnglish ? "More " : "เมนูอื่นๆ ";
-					
+
 					// Reset mega menu button text and icon
-					$(".mainmenu > ul > li.has-dropdown.btn-menu").each(function() {
+					$(".mainmenu > ul > li.has-dropdown.btn-menu").each(function () {
 						var $link = $(this).find("> a");
 						var $icon = $link.find(".material-symbols-rounded");
-						$link.contents().filter(function() {
+						$link.contents().filter(function () {
 							return this.nodeType === 3;
 						}).first().replaceWith(defaultText);
 						$icon.text("notes");
 					});
 				}
 			});
-			
+
 			// Prevent closing when clicking inside submenu
 			$(".mainmenu .sub-menu").on("click", function (e) {
 				e.stopPropagation();
 			});
 		}
 	}
-	
+
 	// Initialize on page load - รอให้ header โหลดเสร็จก่อน
 	function initializeDesktopMenu() {
 		desktopMenuClickDropdown();
@@ -2121,7 +2131,7 @@ Progressbar js
 
 	// รอ event 'headersLoaded' จาก header-loader.js
 	document.addEventListener('headersLoaded', initializeDesktopMenu);
-	
+
 	// Reinitialize on window resize
 	var resizeTimer;
 	$(window).on("resize", function () {
@@ -2129,28 +2139,107 @@ Progressbar js
 		resizeTimer = setTimeout(function () {
 			// Remove all active states when resizing
 			$(".mainmenu li.has-dropdown").removeClass("dropdown-active");
-			
+
 			// ตรวจสอบภาษาจากชื่อไฟล์
 			var isEnglish = window.location.pathname.includes('-en.html');
 			var defaultText = isEnglish ? "More " : "เมนูอื่นๆ ";
-			
+
 			// Reset mega menu button text and icon
-			$(".mainmenu > ul > li.has-dropdown.btn-menu").each(function() {
+			$(".mainmenu > ul > li.has-dropdown.btn-menu").each(function () {
 				var $link = $(this).find("> a");
 				var $icon = $link.find(".material-symbols-rounded");
-				$link.contents().filter(function() {
+				$link.contents().filter(function () {
 					return this.nodeType === 3;
 				}).first().replaceWith(defaultText);
 				$icon.text("notes");
 			});
-			
+
 			// Unbind previous events
 			$(".mainmenu > ul > li.has-dropdown > a").off("click");
 			$(".mainmenu .sub-menu li.has-dropdown > a").off("click");
-			
+
 			// Reinitialize if on desktop
 			desktopMenuClickDropdown();
 		}, 250);
 	});
 
 })(jQuery);
+
+
+/* ---------------------------------------------------------
+	Map Glow Animation
+--------------------------------------------------------- */
+function initMapGlowAnimation() {
+	const container = document.querySelector('.map-glow-container');
+	
+	if (!container) return;
+	
+	// ตรวจสอบขนาดหน้าจอ
+	const isMobile = window.innerWidth <= 575;
+	const isTablet = window.innerWidth > 575 && window.innerWidth <= 991;
+	
+	// กำหนดจำนวน particles ตามขนาดหน้าจอ
+	let particleCount;
+	if (isMobile) {
+		particleCount = 16; // ลดจำนวนบนมือถือ (เพิ่ม 5% จาก 15)
+	} else if (isTablet) {
+		particleCount = 21; // (เพิ่ม 5% จาก 20)
+	} else {
+		particleCount = 32; // Desktop (เพิ่ม 5% จาก 30)
+	}
+	
+	// สร้าง particles
+	for (let i = 0; i < particleCount; i++) {
+		const particle = document.createElement('div');
+		particle.className = 'glow-particle';
+		
+		// แบ่ง particles ออกเป็น 3 กลุ่ม (ซ้าย, กลาง, ขวา)
+		let leftPos;
+		const group = i % 3; // แบ่งเป็น 3 กลุ่ม
+		
+		if (group === 0) {
+			// กลุ่มซ้าย: 0-25%
+			leftPos = Math.random() * 25;
+		} else if (group === 1) {
+			// กลุ่มกลาง: 35-65%
+			leftPos = 35 + Math.random() * 30;
+		} else {
+			// กลุ่มขวา: 75-100%
+			leftPos = 75 + Math.random() * 25;
+		}
+		
+		particle.style.left = leftPos + '%';
+		
+		// สุ่ม animation delay (0-8 วินาที)
+		const delay = Math.random() * 8;
+		particle.style.animationDelay = delay + 's';
+		
+		// สุ่ม animation duration (8-12 วินาที)
+		const duration = 8 + Math.random() * 4;
+		particle.style.animationDuration = duration + 's';
+		
+		container.appendChild(particle);
+	}
+}
+
+// เรียกใช้เมื่อ DOM โหลดเสร็จ
+if (document.readyState === 'loading') {
+	document.addEventListener('DOMContentLoaded', initMapGlowAnimation);
+} else {
+	initMapGlowAnimation();
+}
+
+// Re-initialize on window resize (debounced)
+let glowResizeTimer;
+window.addEventListener('resize', function() {
+	clearTimeout(glowResizeTimer);
+	glowResizeTimer = setTimeout(function() {
+		const container = document.querySelector('.map-glow-container');
+		if (container) {
+			// ล้าง particles เดิม
+			container.innerHTML = '';
+			// สร้างใหม่
+			initMapGlowAnimation();
+		}
+	}, 500);
+});

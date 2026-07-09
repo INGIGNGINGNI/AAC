@@ -16,6 +16,11 @@
     <!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/fav.png">
 
+    <!-- Preload critical fonts for better performance on mobile -->
+    <link rel="preload" href="assets/fonts/prompt/prompt-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/prompt/prompt-medium-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/prompt/prompt-semibold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/font-awesome-pro.min.css">
@@ -347,7 +352,7 @@
                                         <div class="project-item-inner h6-project-item-inner" data-bg-image="./assets/images/business/aac-image.webp">
                                             <div class="project-content">
                                                 <div class="logo">
-                                                    <img src="assets/images/icons/brand/aac-logo.svg" alt="บริษัท ออโตโมทีฟ เอเชียติ๊ก (ประเทศไทย) จำกัด">
+                                                    <img src="assets/images/icons/brand/aac-logo.webp" alt="บริษัท ออโตโมทีฟ เอเชียติ๊ก (ประเทศไทย) จำกัด">
                                                 </div>
                                                 <div class="project-text">
                                                     <h3 class="title"><a href="javascript:void(0)">บริษัท ออโตโมทีฟ เอเชียติ๊ก (ประเทศไทย) จำกัด</a></h3>
@@ -364,7 +369,7 @@
                                         <div class="project-item-inner h6-project-item-inner" data-bg-image="./assets/images/business/tru-th-image.webp"">
                                             <div class="project-content">
                                                 <div class="logo">
-                                                    <img src="assets/images/icons/brand/tru-th-logo.svg" alt="บริษัท ทรู ออโตโมทีฟ จำกัด">
+                                                    <img src="assets/images/icons/brand/tru-th-logo.webp" alt="บริษัท ทรู ออโตโมทีฟ จำกัด">
                                                 </div>
                                                 <div class="project-text">
                                                     <h3 class="title"><a href="javascript:void(0)">บริษัท ทรู ออโตโมทีฟ จำกัด</a></h3>
@@ -381,7 +386,7 @@
                                         <div class="project-item-inner h6-project-item-inner" data-bg-image="./assets/images/business/tru-malaysia-image.webp">
                                             <div class="project-content">
                                                 <div class="logo">
-                                                    <img src="assets/images/icons/brand/tru-malaysia-logo.svg" alt="Tru Automotive (M) Sdn. Bhd.">
+                                                    <img src="assets/images/icons/brand/tru-malaysia-logo.webp" alt="Tru Automotive (M) Sdn. Bhd.">
                                                 </div>
                                                 <div class="project-text">
                                                     <h3 class="title"><a href="javascript:void(0)">Tru Automotive (M) Sdn. Bhd.</a></h3>
@@ -398,7 +403,7 @@
                                         <div class="project-item-inner h6-project-item-inner" data-bg-image="./assets/images/business/ags-image.webp">
                                             <div class="project-content">
                                                 <div class="logo">
-                                                    <img src="assets/images/icons/brand/ags-logo.svg" alt="บริษัท อัลไลอันซ์ เกียร์ แอนด์ พาร์ท โซลูชั่นส์ จำกัด">
+                                                    <img src="assets/images/icons/brand/ags-logo.webp" alt="บริษัท อัลไลอันซ์ เกียร์ แอนด์ พาร์ท โซลูชั่นส์ จำกัด">
                                                 </div>
                                                 <div class="project-text">
                                                     <h3 class="title"><a href="javascript:void(0)">บริษัท อัลไลอันซ์ เกียร์ แอนด์ พาร์ท โซลูชั่นส์ จำกัด</a></h3>
@@ -436,6 +441,19 @@
                                         <source media="(max-width: 991px)" srcset="assets/images/bg/map-md-image.webp">
                                         <img src="assets/images/bg/map-image.webp" alt="Our Coverage Spans Across Southeast Asia Connecting You to Quality Automotive Parts">
                                     </picture>
+                                    <div class="map-glow-container"></div>
+                                    <div class="map-country thai">
+                                        <img src="assets/images/icons/map/Thailand.svg" alt="Thailand">
+                                    </div>
+                                    <div class="map-country laos">
+                                        <img src="assets/images/icons/map/Laos.svg" alt="Laos">
+                                    </div>
+                                    <div class="map-country indonesia">
+                                        <img src="assets/images/icons/map/Indonesia.svg" alt="Indonesia">
+                                    </div>
+                                    <div class="map-country malaysia">
+                                        <img src="assets/images/icons/map/Malaysia.svg" alt="Malaysia">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -501,7 +519,7 @@
                                                 <img src="assets/images/product/accessory.webp" alt="">
                                             </div>
                                             <div class="product-name">
-                                                <p>Accessory</p>
+                                                <p>อุปกรณ์เสริม</p>
                                             </div>
                                         </div>
                                     </a>
@@ -511,7 +529,7 @@
                                                 <img src="assets/images/product/adas.webp" alt="">
                                             </div>
                                             <div class="product-name">
-                                                <p>ADAS</p>
+                                                <p>ระบบช่วยเหลือผู้ขับขี่ขั้นสูง</p>
                                             </div>
                                         </div>
                                     </a>
@@ -521,7 +539,7 @@
                                                 <img src="assets/images/product/additive-fluid-chemical.webp" alt="">
                                             </div>
                                             <div class="product-name">
-                                                <p>Additive, Fluid & Chemical</p>
+                                                <p>สารเติมแต่ง ของเหลว และเคมีภัณฑ์</p>
                                             </div>
                                         </div>
                                     </a>
@@ -531,7 +549,7 @@
                                                 <img src="assets/images/product/battery.webp" alt="">
                                             </div>
                                             <div class="product-name">
-                                                <p>Battery</p>
+                                                <p>แบตเตอรี่</p>
                                             </div>
                                         </div>
                                     </a>
@@ -541,7 +559,7 @@
                                                 <img src="assets/images/product/bearing.webp" alt="">
                                             </div>
                                             <div class="product-name">
-                                                <p>Bearing</p>
+                                                <p>ตลับลูกปืน</p>
                                             </div>
                                         </div>
                                     </a>
@@ -551,7 +569,7 @@
                                                 <img src="assets/images/product/body.webp" alt="">
                                             </div>
                                             <div class="product-name">
-                                                <p>Body</p>
+                                                <p>ตัวถังรถยนต์</p>
                                             </div>
                                         </div>
                                     </a>
@@ -561,7 +579,7 @@
                                                 <img src="assets/images/product/chassis.webp" alt="">
                                             </div>
                                             <div class="product-name">
-                                                <p>Chassis</p>
+                                                <p>แชสซี / โครงรถ</p>
                                             </div>
                                         </div>
                                     </a>
@@ -571,7 +589,7 @@
                                                 <img src="assets/images/product/electronic-system.webp" alt="">
                                             </div>
                                             <div class="product-name">
-                                                <p>Electric & Electronic System</p>
+                                                <p>ระบบไฟฟ้าและอิเล็กทรอนิกส์</p>
                                             </div>
                                         </div>
                                     </a>
@@ -581,7 +599,7 @@
                                                 <img src="assets/images/product/filtration-system.webp" alt="">
                                             </div>
                                             <div class="product-name">
-                                                <p>Filtration System</p>
+                                                <p>ระบบกรอง</p>
                                             </div>
                                         </div>
                                     </a>
@@ -591,7 +609,7 @@
                                                 <img src="assets/images/product/garage-equipment-tools.webp" alt="">
                                             </div>
                                             <div class="product-name">
-                                                <p>Garage Equipment & Tools</p>
+                                                <p>อุปกรณ์และเครื่องมือสำหรับศูนย์ซ่อม</p>
                                             </div>
                                         </div>
                                     </a>
@@ -601,7 +619,7 @@
                                                 <img src="assets/images/product/lubricant.webp" alt="">
                                             </div>
                                             <div class="product-name">
-                                                <p>Lubricant</p>
+                                                <p>สารหล่อลื่น</p>
                                             </div>
                                         </div>
                                     </a>
@@ -611,12 +629,9 @@
                                                 <img src="assets/images/product/machinery-test-equipment.webp" alt="">
                                             </div>
                                             <div class="product-name">
-                                                <p>Machinery & Test Equipment</p>
+                                                <p>เครื่องจักรและอุปกรณ์ทดสอบ</p>
                                             </div>
                                         </div>
-                                    </a>
-                                    <a href="javascript:void(0)" class="d-xl-block d-none">
-                                        <div class="product-item"></div>
                                     </a>
                                     <a href="javascript:void(0)" title="Powertrain System">
                                         <div class="product-item">
@@ -624,7 +639,7 @@
                                                 <img src="assets/images/product/powertrain-system.webp" alt="">
                                             </div>
                                             <div class="product-name">
-                                                <p>Powertrain System</p>
+                                                <p>ระบบส่งกำลัง</p>
                                             </div>
                                         </div>
                                     </a>
@@ -634,7 +649,7 @@
                                                 <img src="assets/images/product/seal.webp" alt="">
                                             </div>
                                             <div class="product-name">
-                                                <p>Seal</p>
+                                                <p>ซีล / ปะเก็น</p>
                                             </div>
                                         </div>
                                     </a>
@@ -644,7 +659,7 @@
                                                 <img src="assets/images/product/thermal-system.webp" alt="">
                                             </div>
                                             <div class="product-name">
-                                                <p>Thermal System</p>
+                                                <p>ระบบจัดการความร้อน</p>
                                             </div>
                                         </div>
                                     </a>
@@ -654,16 +669,19 @@
                                                 <img src="assets/images/product/wiper.webp" alt="">
                                             </div>
                                             <div class="product-name">
-                                                <p>Wiper</p>
+                                                <p>ที่ปัดน้ำฝน</p>
                                             </div>
                                         </div>
-                                    </a>
-                                    <a href="javascript:void(0)" class="d-xl-block d-none">
-                                        <div class="product-item"></div>
                                     </a>
                                 </div>
                             </div>
                         </div>     
+                    </div>
+                    <div class="bg-shape-1">
+                        <img src="assets/images/shape/pattern-2.svg" alt="">
+                    </div>
+                    <div class="bg-shape-2">
+                        <img src="assets/images/shape/pattern-3.svg" alt="">
                     </div>
                 </section>
                 <!-- end: Product Section -->
@@ -699,7 +717,7 @@
                                         <a href="javascript:void(0)"><img src="assets/images/blog/blog-1.webp" alt="blog news image"></a>
                                         <div class="blog-date">
                                             <span class="date">8</span>
-                                            <span class="month">ก.ย 2568</span>
+                                            <span class="month">ก.ย. 2568</span>
                                         </div>
                                     </div>
                                     <div class="blog-content">
@@ -720,7 +738,7 @@
                                         <a href="javascript:void(0)"><img src="assets/images/blog/blog-2.webp" alt="blog news image"></a>
                                         <div class="blog-date">
                                             <span class="date">12</span>
-                                            <span class="month">ส.ค 2568</span>
+                                            <span class="month">ส.ค. 2568</span>
                                         </div>
                                     </div>
                                     <div class="blog-content">
@@ -741,7 +759,7 @@
                                         <a href="javascript:void(0)"><img src="assets/images/blog/blog-3.webp" alt="blog news image"></a>
                                         <div class="blog-date">
                                             <span class="date">18</span>
-                                            <span class="month">ก.ค 2568</span>
+                                            <span class="month">ก.ค. 2568</span>
                                         </div>
                                     </div>
                                     <div class="blog-content">
@@ -802,16 +820,16 @@
                                                     <div class="h5-blog-wrapper">
                                                         <div class="blog-item style-2 h5-blog-item">
                                                             <div class="blog-thumb">
-                                                                <a href="blog-details.html"><img src="assets/images/blog/h5-blog-1.webp" alt=""></a>
+                                                                <a href="javascript:void(0)"><img src="assets/images/blog/h5-blog-1.webp" alt="AAC ก้าวสู่มาตรฐานใหม่ของระบบเบรกและช่วงล่างเพื่อความปลอดภัยที่คุณไว้วางใจไดในทุกการเดินทาง"></a>
                                                                 <div class="blog-date">
                                                                     <span class="date">8</span>
-                                                                    <span class="month">ก.ย 2568</span>
+                                                                    <span class="month">ก.ย. 2568</span>
                                                                 </div>
                                                             </div>
                                                             <div class="blog-content">
                                                                 <div class="title-area">
                                                                     <h4 class="title">
-                                                                        <a href="blog-details.html">AAC ก้าวสู่มาตรฐานใหม่ของระบบเบรกและช่วงล่างเพื่อความปลอดภัยที่คุณไว้วางใจไดในทุกการเดินทาง</a>
+                                                                        <a href="javascript:void(0)">AAC ก้าวสู่มาตรฐานใหม่ของระบบเบรกและช่วงล่างเพื่อความปลอดภัยที่คุณไว้วางใจได้ในทุกการเดินทาง</a>
                                                                     </h4>
                                                                     <p class="desc">เปิดตัวระบบเบรกและอะไหล่เบรกรุ่นใหม่ที่พัฒนาภายใต้เทคโนโลยีล้ำสมัย ตอบสนองการหยุดรถได้อย่างมั่นใจ แม้ในสภาวะการขับขี่ที่ท้าทาย ช่วยยกระดับความปลอดภัยและเพิ่มความอุ่นใจให้กับผู้ขับขี่และผู้โดยสารในทุกเส้นทาง</p>
                                                                 </div>
@@ -823,16 +841,16 @@
                                                         </div>
                                                         <div class="blog-item  style-2 h5-blog-item">
                                                             <div class="blog-thumb">
-                                                                <a href="blog-details.html"><img src="assets/images/blog/h5-blog-2.webp" alt=""></a>
+                                                                <a href="javascript:void(0)"><img src="assets/images/blog/h5-blog-2.webp" alt="สัมผัสการขับขี่ที่เหนือกว่าด้วยโช๊คอัพ AAC ที่ออกแบบเพื่อความนุ่มนวลและการควบคุมที่มั่นคง"></a>
                                                                 <div class="blog-date">
                                                                     <span class="date">12</span>
-                                                                    <span class="month">ส.ค 2568</span>
+                                                                    <span class="month">ส.ค. 2568</span>
                                                                 </div>
                                                             </div>
                                                             <div class="blog-content">
                                                                 <div class="title-area">
                                                                     <h4 class="title">
-                                                                        <a href="blog-details.html">สัมผัสการขับขี่ที่เหนือกว่าด้วยโช๊คอัพ AAC ที่ออกแบบเพื่อความนุ่มนวลและการควบคุมที่มั่นคง</a>
+                                                                        <a href="javascript:void(0)">สัมผัสการขับขี่ที่เหนือกว่าด้วยโช๊คอัพ AAC ที่ออกแบบเพื่อความนุ่มนวลและการควบคุมที่มั่นคง</a>
                                                                     </h4>
                                                                     <p class="desc">โช๊คอัพรุ่นใหม่จาก AACมาพร้อมเทคโนโลยีลดแรงสั่นสะเทือนและควบคุมการทรงตัวได้อย่างมีประสิทธิภาพช่วยเพิ่มความนุ่มนวลในการขับขี่และมอบความมั่นใจในการเข้าโค้งหรือขับขี่บนสภาพถนนที่หลากหลาย ให้คุณเพลิดเพลินกับการเดินทางทุกกิโลเมตร</p>
                                                                 </div>
@@ -844,16 +862,16 @@
                                                         </div>
                                                         <div class="blog-item style-2 h5-blog-item">
                                                             <div class="blog-thumb">
-                                                                <a href="blog-details.html"><img src="assets/images/blog/h5-blog-3.webp" alt=""></a>
+                                                                <a href="javascript:void(0)"><img src="assets/images/blog/h5-blog-3.webp" alt="ปกป้องเครื่องยนต์อย่างเหนือชั้น ด้วยนวัตกรรมน้ำมันเครื่องสูตรใหม่ล่าสุด"></a>
                                                                 <div class="blog-date">
                                                                     <span class="date">18</span>
-                                                                    <span class="month">ก.ค 2568</span>
+                                                                    <span class="month">ก.ค. 2568</span>
                                                                 </div>
                                                             </div>
                                                             <div class="blog-content">
                                                                 <div class="title-area">
                                                                     <h4 class="title">
-                                                                        <a href="blog-details.html">ปกป้องเครื่องยนต์อย่างเหนือชั้น ด้วยนวัตกรรมน้ำมันเครื่องสูตรใหม่ล่าสุด</a>
+                                                                        <a href="javascript:void(0)">ปกป้องเครื่องยนต์อย่างเหนือชั้น ด้วยนวัตกรรมน้ำมันเครื่องสูตรใหม่ล่าสุด</a>
                                                                     </h4>
                                                                     <p class="desc">น้ำมันเครื่องคุณภาพสูงที่ถูกคิดค้นมาเพื่อยืดอายุการใช้งานของเครื่องยนต์ ลดการสึกหรอ และเพิ่มประสิทธิภาพการทำงานสูงสุด ด้วยสูตรเฉพาะที่ช่วยลดแรงเสียดทานและปรับสมดุลการเผาไหม้ </p>
                                                                 </div>
@@ -882,18 +900,18 @@
                                                     <div class="h5-blog-wrapper">
                                                         <div class="blog-item style-2 h5-blog-item">
                                                             <div class="blog-thumb">
-                                                                <a href="blog-details.html"><img src="assets/images/blog/h5-blog-1.webp" alt=""></a>
+                                                                <a href="javascript:void(0)"><img src="assets/images/blog/h5-blog-4.webp" alt="ขับรถทุกวันแต่เคยตรวจช่วงล่างหรือไม่? รวมสัญญาณเตือนและเคล็ดลับดูแลที่ช่างแนะนำ"></a>
                                                                 <div class="blog-date">
                                                                     <span class="date">8</span>
-                                                                    <span class="month">ก.ย 2568</span>
+                                                                    <span class="month">ก.ย. 2568</span>
                                                                 </div>
                                                             </div>
                                                             <div class="blog-content">
                                                                 <div class="title-area">
                                                                     <h4 class="title">
-                                                                        <a href="blog-details.html">AAC ก้าวสู่มาตรฐานใหม่ของระบบเบรกและช่วงล่างเพื่อความปลอดภัยที่คุณไว้วางใจไดในทุกการเดินทาง</a>
+                                                                        <a href="javascript:void(0)">ขับรถทุกวันแต่เคยตรวจช่วงล่างหรือไม่? รวมสัญญาณเตือนและเคล็ดลับดูแลที่ช่างแนะนำ</a>
                                                                     </h4>
-                                                                    <p class="desc">เปิดตัวระบบเบรกและอะไหล่เบรกรุ่นใหม่ที่พัฒนาภายใต้เทคโนโลยีล้ำสมัย ตอบสนองการหยุดรถได้อย่างมั่นใจ แม้ในสภาวะการขับขี่ที่ท้าทาย ช่วยยกระดับความปลอดภัยและเพิ่มความอุ่นใจให้กับผู้ขับขี่และผู้โดยสารในทุกเส้นทาง</p>
+                                                                    <p class="desc">เจาะลึกอาการที่บ่งบอกว่าช่วงล่างเริ่มเสื่อมสภาพ พร้อมคำแนะนำในการดูแลและตรวจสอบตามระยะ เพื่อยืดอายุการใช้งานและลดค่าใช้จ่ายในการซ่อมบำรุงในอนาคต</p>
                                                                 </div>
                                                                 <a class="text-btn btn-light" href="javascript:void(0)">
                                                                     <span class="btn-text"><span>อ่านเพิ่มเติม</span></span>
@@ -903,18 +921,18 @@
                                                         </div>
                                                         <div class="blog-item  style-2 h5-blog-item">
                                                             <div class="blog-thumb">
-                                                                <a href="blog-details.html"><img src="assets/images/blog/h5-blog-2.webp" alt=""></a>
+                                                                <a href="javascript:void(0)"><img src="assets/images/blog/h5-blog-5.webp" alt="แนวทางการดูแลและบำรุงรักษารถยนต์อย่างสม่ำเสมอ เพื่อสมรรถนะที่ดีและความปลอดภัยในระยะยาว"></a>
                                                                 <div class="blog-date">
                                                                     <span class="date">12</span>
-                                                                    <span class="month">ส.ค 2568</span>
+                                                                    <span class="month">ส.ค. 2568</span>
                                                                 </div>
                                                             </div>
                                                             <div class="blog-content">
                                                                 <div class="title-area">
                                                                     <h4 class="title">
-                                                                        <a href="blog-details.html">สัมผัสการขับขี่ที่เหนือกว่าด้วยโช๊คอัพ AAC ที่ออกแบบเพื่อความนุ่มนวลและการควบคุมที่มั่นคง</a>
+                                                                        <a href="javascript:void(0)">แนวทางการดูแลและบำรุงรักษารถยนต์อย่างสม่ำเสมอ เพื่อสมรรถนะที่ดีและความปลอดภัยในระยะยาว</a>
                                                                     </h4>
-                                                                    <p class="desc">โช๊คอัพรุ่นใหม่จาก AACมาพร้อมเทคโนโลยีลดแรงสั่นสะเทือนและควบคุมการทรงตัวได้อย่างมีประสิทธิภาพช่วยเพิ่มความนุ่มนวลในการขับขี่และมอบความมั่นใจในการเข้าโค้งหรือขับขี่บนสภาพถนนที่หลากหลาย ให้คุณเพลิดเพลินกับการเดินทางทุกกิโลเมตร</p>
+                                                                    <p class="desc">รวมเคล็ดลับการตรวจเช็กและดูแลรถยนต์ในจุดสำคัญ ที่ช่วยป้องกันปัญหาก่อนเกิดความเสียหายและลดค่าใช้จ่ายในการซ่อมบำรุง</p>
                                                                 </div>
                                                                 <a class="text-btn btn-light" href="javascript:void(0)">
                                                                     <span class="btn-text"><span>อ่านเพิ่มเติม</span></span>
@@ -924,18 +942,18 @@
                                                         </div>
                                                         <div class="blog-item style-2 h5-blog-item">
                                                             <div class="blog-thumb">
-                                                                <a href="blog-details.html"><img src="assets/images/blog/h5-blog-3.webp" alt=""></a>
+                                                                <a href="javascript:void(0)"><img src="assets/images/blog/h5-blog-6.webp" alt="เลือกใช้อะไหล่รถยนต์อย่างไรให้เหมาะสม และควรเปลี่ยนเมื่อถึงเวลา เพื่อความปลอดภัยและประสิทธิภาพสูงสุด"></a>
                                                                 <div class="blog-date">
                                                                     <span class="date">18</span>
-                                                                    <span class="month">ก.ค 2568</span>
+                                                                    <span class="month">ก.ค. 2568</span>
                                                                 </div>
                                                             </div>
                                                             <div class="blog-content">
                                                                 <div class="title-area">
                                                                     <h4 class="title">
-                                                                        <a href="blog-details.html">ปกป้องเครื่องยนต์อย่างเหนือชั้น ด้วยนวัตกรรมน้ำมันเครื่องสูตรใหม่ล่าสุด</a>
+                                                                        <a href="javascript:void(0)">เลือกใช้อะไหล่รถยนต์อย่างไรให้เหมาะสม และควรเปลี่ยนเมื่อถึงเวลา เพื่อความปลอดภัยและประสิทธิภาพสูงสุด</a>
                                                                     </h4>
-                                                                    <p class="desc">น้ำมันเครื่องคุณภาพสูงที่ถูกคิดค้นมาเพื่อยืดอายุการใช้งานของเครื่องยนต์ ลดการสึกหรอ และเพิ่มประสิทธิภาพการทำงานสูงสุด ด้วยสูตรเฉพาะที่ช่วยลดแรงเสียดทานและปรับสมดุลการเผาไหม้ </p>
+                                                                    <p class="desc">ทำความเข้าใจประเภทของอะไหล่รถยนต์ สัญญาณเตือนที่ควรเปลี่ยน และข้อควรรู้ก่อนเลือกใช้อะไหล่ เพื่อให้รถพร้อมใช้งานอย่างมั่นใจ</p>
                                                                 </div>
                                                                 <a class="text-btn btn-light" href="javascript:void(0)">
                                                                     <span class="btn-text"><span>อ่านเพิ่มเติม</span></span>
@@ -1035,7 +1053,7 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <div class="countup-wrap wow fadeInUp" data-wow-delay=".4s">
+                                <div class="countup-wrap wow fadeInUp" data-wow-delay=".6s">
                                     <div class="countup-item">
                                         <div class="inline-content">
                                             <span class="odometer countup-number" data-count="125,827"></span>
@@ -1061,19 +1079,11 @@
                                         <span class="count-text">กำไรสุทธิ (ล้านบาท)</span>
                                     </div>
                                 </div>
-                                <div class="btn-area wow fadeInUp" data-wow-delay=".5s">
+                                <div class="btn-area wow fadeInUp" data-wow-delay=".7s">
                                     <a class="tj-primary-btn" href="javascript:void(0)">
                                         <span class="btn-text"><span>นักลงทุนสัมพันธ์</span></span>
                                         <span class="btn-icon"><span class="material-symbols-rounded">arrow_forward</span></span>
                                     </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="-wrapper wow fadeInUp" data-wow-delay=".4s">
                                 </div>
                             </div>
                         </div>
@@ -1139,6 +1149,7 @@
     <script src="assets/js/mega-menu-simple.js"></script>
     <script src="assets/js/partner.js"></script>
     <script src="assets/js/language-switcher.js"></script>
+
 </body>
 
 </html>

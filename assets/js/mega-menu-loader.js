@@ -10,10 +10,13 @@
 	var currentPath = window.location.pathname;
 	var isEnglish = currentPath.includes('-en.html');
 	var lang = isEnglish ? 'en' : 'th';
+	
+	// ตรวจสอบว่าเป็นหน้า IR หรือไม่
+	var isIRPage = currentPath.includes('investor');
 
 	// รอให้ header components โหลดเสร็จก่อน
 	function initMegaMenuLoader() {
-		console.log("Mega Menu Loader: Initializing (" + lang + ")");
+		console.log("Mega Menu Loader: Initializing (" + lang + ", " + (isIRPage ? "IR" : "Main") + ")");
 		// Add a small delay to ensure all elements are rendered
 		setTimeout(function() {
 			loadMegaMenuContent();
@@ -30,10 +33,20 @@
 		console.log("Mega Menu Loader: Found wrappers:", $megaMenuWrappers.length);
 		
 		if ($megaMenuWrappers.length > 0) {
-			// เลือกไฟล์ตามภาษา
-			var megaMenuFile = isEnglish ? 
-				"components/mega-menu-content-en.html" : 
-				"components/mega-menu-content.html";
+			// เลือกไฟล์ตามภาษาและประเภทหน้า
+			var megaMenuFile;
+			
+			if (isIRPage) {
+				// ใช้ mega menu IR
+				megaMenuFile = isEnglish ? 
+					"components/mega-menu-content-ir-en.html" : 
+					"components/mega-menu-content-ir.html";
+			} else {
+				// ใช้ mega menu ปกติ
+				megaMenuFile = isEnglish ? 
+					"components/mega-menu-content-en.html" : 
+					"components/mega-menu-content.html";
+			}
 			
 			// Load content from external file
 			$.ajax({
@@ -99,8 +112,10 @@
 				// Let the link navigate normally - don't prevent default
 				console.log("Mega Menu Loader: Navigating to:", href);
 				
-				// Close the mega menu dropdown
-				$link.closest("li.has-dropdown").removeClass("dropdown-active");
+				// Close the mega menu dropdown and reset button text
+				var $parentDropdown = $link.closest("li.has-dropdown");
+				$parentDropdown.removeClass("dropdown-active");
+				resetMegaMenuButton($parentDropdown);
 				
 				return true;
 			}
@@ -136,9 +151,11 @@
 				$targetSubmenu.addClass("active");
 				console.log("Mega Menu Loader: Submenu activated");
 			} else {
-				// If no submenu found, close the mega menu
+				// If no submenu found, close the mega menu and reset button text
 				console.log("Mega Menu Loader: No submenu found, closing mega menu");
-				$link.closest("li.has-dropdown").removeClass("dropdown-active");
+				var $parentDropdown = $link.closest("li.has-dropdown");
+				$parentDropdown.removeClass("dropdown-active");
+				resetMegaMenuButton($parentDropdown);
 			}
 			
 			return false;
@@ -154,6 +171,62 @@
 				console.log("Mega Menu Loader: Click handler should be ready");
 			}
 		}, 500);
+	}
+
+	// ฟังก์ชันรีเซ็ตข้อความปุ่ม "เมนูอื่นๆ" และรีเซ็ตเมนูกลับไปที่เมนูแรก
+	function resetMegaMenuButton($parentDropdown) {
+		var $button = $parentDropdown.find("> a");
+		var $icon = $button.find(".material-symbols-rounded");
+		
+		// ตรวจสอบภาษา
+		var openText = isEnglish ? "More " : "เมนูอื่นๆ ";
+		
+		// เปลี่ยนข้อความกลับเป็น "เมนูอื่นๆ" หรือ "More"
+		$button.contents().filter(function() {
+			return this.nodeType === 3; // Text node
+		}).first().replaceWith(openText);
+		
+		// เปลี่ยน icon กลับเป็น "notes"
+		if ($icon.length > 0) {
+			$icon.text("notes");
+		}
+		
+		// รีเซ็ตเมนูกลับไปที่เมนูแรก
+		var $wrapper = $parentDropdown.find(".mega-menu-wrapper");
+		if ($wrapper.length > 0) {
+			// ลบ active จากเมนูทั้งหมด
+			$wrapper.find(".mega-menu-main-link").removeClass("active");
+			$wrapper.find(".mega-menu-pages-single.submenu").removeClass("active");
+			
+			// เพิ่ม active ให้กับเมนูแรกและ submenu แรก
+			var $firstLink = $wrapper.find(".mega-menu-main-link").first();
+			var firstMenuId = $firstLink.data("menu-id");
+			
+			// ถ้าเมนูแรกมี menu-id (มี submenu)
+			if (firstMenuId) {
+				$firstLink.addClass("active");
+				var $firstSubmenu = $wrapper.find('.mega-menu-pages-single.submenu[data-submenu-id="' + firstMenuId + '"]');
+				if ($firstSubmenu.length > 0) {
+					$firstSubmenu.addClass("active");
+					console.log("Mega Menu Loader: Reset to first menu with submenu:", firstMenuId);
+				}
+			} else {
+				// ถ้าเมนูแรกไม่มี submenu ให้หาเมนูถัดไปที่มี submenu
+				var $linksWithSubmenu = $wrapper.find(".mega-menu-main-link[data-menu-id]");
+				if ($linksWithSubmenu.length > 0) {
+					var $firstLinkWithSubmenu = $linksWithSubmenu.first();
+					var menuId = $firstLinkWithSubmenu.data("menu-id");
+					$firstLinkWithSubmenu.addClass("active");
+					var $submenu = $wrapper.find('.mega-menu-pages-single.submenu[data-submenu-id="' + menuId + '"]');
+					if ($submenu.length > 0) {
+						$submenu.addClass("active");
+						console.log("Mega Menu Loader: Reset to first menu with submenu:", menuId);
+					}
+				}
+			}
+		}
+		
+		console.log("Mega Menu Loader: Button text reset to:", openText);
 	}
 
 })(jQuery);
